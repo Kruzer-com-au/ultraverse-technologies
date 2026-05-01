@@ -3,8 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,8 +15,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ultraverse Technologies | Scalable Digital Ecosystems",
-  description: "Ultraverse Technologies provides cutting-edge solutions for streaming, data, and decentralized ecosystems.",
   title: "Ultraverse Technologies | Scalable Digital Ecosystems",
   description: "Ultraverse Technologies provides cutting-edge solutions for streaming, data, and decentralized ecosystems.",
 };
