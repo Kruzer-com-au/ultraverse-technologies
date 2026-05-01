@@ -5,15 +5,12 @@ const footerNavigation = {
   products: [
     { name: 'ULTRASTREAM', href: '/products/ultrastream' },
     { name: 'ULTRADATA', href: '/products/ultradata' },
-    { name: 'Squad Legacy', href: '/products/squad-legacy' },
-    { name: 'Quantum Creatures', href: '/products/quantum-creatures' },
-    { name: 'Time Odyssey', href: '/products/time-odyssey' },
-    { name: 'Ultraworld', href: '/products/ultraworld' },
+    { name: 'ULTRAVERSE', href: '/products/ultraverse' },
   ],
   solutions: [
     { name: 'White-Label Streaming', href: '/solutions/white-label-streaming' },
     { name: 'City Data & Digital Twins', href: '/solutions/city-data' },
-    { name: 'Privacy & Compliance', href: '/solutions/privacy-compliance' },
+    { name: 'Privacy', href: '/solutions/privacy-compliance' },
     { name: 'Creator Economy', href: '/solutions/creator-economy' },
     { name: 'Secure Communications', href: '/solutions/secure-communications' },
     { name: 'Community SDK', href: '/solutions/community-sdk' },
@@ -32,7 +29,7 @@ const footerNavigation = {
     { name: 'About', href: '/company' },
     { name: 'Leadership', href: '/company/leadership' },
     { name: 'Careers', href: '/company/careers' },
-    { name: 'Press', href: '/company/press' },
+    { name: 'Press & Media', href: '/company/press' },
     { name: 'Partners', href: '/company/partners' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -49,9 +46,9 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link className="flex items-center gap-3 mb-4" href="/">
-              <Image src="/images/logo-icon.png" width={28} height={28} alt="Ultraverse Logo" />
+              <Image src="/images/logo.png" width={28} height={28} alt="Ultraverse Logo" />
               <span className="font-bold text-base uppercase text-text-primary">
-                ULTRAVERSE 
+                ULTRAVERSE
                 <span className="text-[10px] opacity-60 ml-1">TECHNOLOGIES</span>
               </span>
             </Link>
@@ -82,7 +79,10 @@ export default function Footer() {
               {footerNavigation.solutions.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm text-text-secondary hover:text-teal-deep transition-colors">
-                    {item.name}
+                    {item.name}       
+
+
+                    
                   </Link>
                 </li>
               ))}

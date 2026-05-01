@@ -1,48 +1,106 @@
+'use client'
+
+import React from 'react'
+import ProductHero from '@/components/sections/product/ProductHero'
+import ProductFeatureList from '@/components/sections/product/ProductFeatureList'
+import ProductCTA from '@/components/sections/product/ProductCTA'
+import ProductVisuals from '@/components/sections/product/ProductVisuals'
+
+const capabilities = [
+  {
+    num: '01',
+    title: 'White-Label Deployment',
+    desc: 'Launch a fully branded streaming platform under your own identity, with complete control over the user experience and monetization.'
+  },
+  {
+    num: '02',
+    title: 'Creator-First Revenue Model',
+    desc: 'Revenue structures designed to put creators first, with transparent splits and direct audience monetization tools.'
+  },
+  {
+    num: '03',
+    title: 'Instant Payments',
+    desc: 'Real-time payment processing that ensures creators and partners are compensated without delays or intermediaries.'
+  },
+  {
+    num: '04',
+    title: 'Real-Time Engagement Tools',
+    desc: 'Interactive features including live polls, reactions, chat overlays, and audience participation mechanics built into the platform.'
+  },
+  {
+    num: '05',
+    title: 'Privacy-First Architecture',
+    desc: 'Zero-knowledge verification and end-to-end encryption protect user data while maintaining full platform functionality.'
+  },
+  {
+    num: '06',
+    title: 'SDK & API Access',
+    desc: 'Comprehensive developer tools for integrating ULTRASTREAM capabilities into existing platforms, apps, and workflows.'
+  }
+]
+
+const enterpriseApps = [
+  {
+    num: '01',
+    title: 'SDK Licensing',
+    desc: "License ULTRASTREAM's core streaming technology for integration into your own products and services."
+  },
+  {
+    num: '02',
+    title: 'White-Label Platform',
+    desc: 'Deploy a fully branded streaming platform for your organization, complete with custom UI, monetization, and analytics.'
+  },
+  {
+    num: '03',
+    title: 'API Integrations',
+    desc: 'Connect ULTRASTREAM capabilities to your existing technology stack through well-documented, enterprise-grade APIs.'
+  },
+  {
+    num: '04',
+    title: 'Custom-Branded Solutions',
+    desc: 'Bespoke streaming solutions tailored to your brand, audience, and operational requirements.'
+  }
+]
+
 export default function UltraStreamPage() {
   return (
-    <div className="py-24 px-6 max-w-7xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-16 items-center mb-24">
-        <div className="flex-1">
-          <span className="text-blue-400 font-semibold tracking-wider uppercase text-sm">Products / UltraStream</span>
-          <h1 className="text-6xl font-bold mt-4 mb-8 leading-tight">
-            High Performance <br />
-            <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Streaming Infrastructure
-            </span>
-          </h1>
-          <p className="text-xl text-gray-400 mb-10 leading-relaxed">
-            Deliver seamless, low-latency video and data streams to millions of concurrent users worldwide with our distributed edge network.
-          </p>
-          <div className="flex gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition-colors">
-              Deploy Now
-            </button>
-            <button className="border border-white/20 hover:bg-white/5 text-white px-8 py-3 rounded-lg font-bold transition-colors">
-              Documentation
-            </button>
-          </div>
-        </div>
-        <div className="flex-1 w-full aspect-square bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-3xl border border-white/5 flex items-center justify-center relative overflow-hidden">
-           {/* Abstract visual element */}
-           <div className="absolute w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-           <div className="z-10 text-9xl font-black text-white/5">STREAM</div>
-        </div>
-      </div>
+    <main className="flex-1 bg-background">
+      <ProductHero 
+        label="ULTRASTREAM"
+        title="The Streaming Platform Built for Creators and Enterprises"
+        description="Privacy-first streaming infrastructure that gives creators and organizations full control over their content, audience, and revenue. From white-label deployments to SDK integrations, ULTRASTREAM powers the next generation of live and on-demand streaming."
+      />
 
-      <section className="grid grid-cols-1 md:grid-cols-3 gap-12 border-t border-white/10 pt-16">
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-400">Low Latency</h3>
-          <p className="text-gray-400">Sub-500ms global delivery for interactive applications and live events.</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-400">Edge Optimized</h3>
-          <p className="text-gray-400">Content processed and cached at the network edge, closest to your users.</p>
-        </div>
-        <div>
-          <h3 className="text-xl font-bold mb-4 text-blue-400">Auto-Scaling</h3>
-          <p className="text-gray-400">Automatically scales to handle sudden traffic spikes without performance degradation.</p>
-        </div>
-      </section>
-    </div>
-  );
+      <ProductFeatureList
+        label="Capabilities"
+        title="Key Capabilities"
+        description="ULTRASTREAM provides the full stack of streaming technology, from infrastructure to engagement, all underpinned by privacy-first design."
+        features={capabilities}
+      />
+
+      <ProductVisuals 
+        primary={{ label: '1400 × 600', sublabel: 'Streaming Platform UI' }}
+      />
+
+      <ProductFeatureList
+        label="Enterprise"
+        title="Enterprise Applications"
+        description="ULTRASTREAM's technology is built for organizations that need reliable, scalable, and customizable streaming infrastructure."
+        features={enterpriseApps}
+        theme="dark"
+      />
+
+      <ProductVisuals 
+        grid={[
+          { label: '600 × 400', sublabel: 'Creator Dashboard' },
+          { label: '600 × 400', sublabel: 'Analytics Overview' }
+        ]}
+      />
+
+      <ProductCTA 
+        title="Interested in ULTRASTREAM?"
+        description="Talk to our team about licensing, white-label deployment, or custom integrations."
+      />
+    </main>
+  )
 }

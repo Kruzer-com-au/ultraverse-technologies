@@ -1,84 +1,443 @@
 @import "tailwindcss";
 
+/* ─── CSS Variables (exact from reference) ─── */
 :root {
-  --background: #ffffff;
-  --foreground: #111827;
-  --text-primary: #111827;
-  --text-secondary: #4A4A4A;
-  --text-muted: #6B7280;
-  --accent-teal: #00f2ea;
-  --accent-teal-deep: #0694a2;
+  --background: #dddbd6;
+  --foreground: #0a0a0a;
+  --surface: #dbdbdb4d;
+  --surface-elevated: #dbdbdb80;
+  --surface-solid: #d4d4d4;
+  --border: #00000014;
+  --border-hover: #00000026;
+  --text-primary: #0a0a0a;
+  --text-secondary: #3a3a3a;
+  --text-muted: #6b6b6b;
+  --accent-teal: #56bfa3;
+  --accent-teal-deep: #047385;
+  --accent-teal-dim: #56bfa31f;
+  --accent-blue: #044875;
+  --accent-purple: #4010de;
+  --accent-orange: #ff8000;
+  --accent-red: #d90b00;
+  --glass-bg: #dbdbdb4d;
+  --glass-border: #fff6;
+  --glass-shadow: #0000000f;
+  --dark-bg: #0a0a0a;
+  --dark-surface: #ffffff0f;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+  --color-surface-solid: var(--surface-solid);
+  --color-border: var(--border);
+  --color-border-hover: var(--border-hover);
   --color-teal: var(--accent-teal);
   --color-teal-deep: var(--accent-teal-deep);
+  --color-accent-teal: var(--accent-teal);
+  --color-accent-teal-deep: var(--accent-teal-deep);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
   --color-text-muted: var(--text-muted);
-  --color-dark-border: rgba(0, 0, 0, 0.05);
+  --color-dark-bg: var(--dark-bg);
+  --color-dark-surface: var(--dark-surface);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), sans-serif;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
 }
 
-/* Technical Glitch Effect */
+/* ─── Base Overrides ─── */
+::selection {
+  color: #000;
+  background: rgba(86, 191, 163, 0.25);
+}
+
+/* ─── Custom Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-teal);
+}
+
+/* ─── Glass System ─── */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+}
+
+.glass-sm {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(219, 219, 219, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+}
+
+.glass-strong {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  background: rgba(219, 219, 219, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 24px;
+}
+
+/* ─── Editorial Typography (exact from reference) ─── */
+.editorial-display {
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 0.85;
+  color: #fff !important;
+}
+
+.editorial-heading {
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 0.9;
+  color: #fff !important;
+}
+
+h1 {
+  color: #fff !important;
+}
+
+h2 {
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 0.9;
+  color: #fff !important;
+  font-size: clamp(2rem, 3.6vw, 4.5rem);
+  margin-bottom: 3rem; /* mb-12 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+}
+
+.editorial-uppercase {
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+.editorial-body {
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+/* ─── Glitch Logo ─── */
 .glitch-logo {
+  align-items: center;
+  display: inline-flex;
   position: relative;
+}
+.glitch-logo:hover {
+  animation: logoGlitch 0.5s steps(3, end);
+}
+@keyframes logoGlitch {
+  0%   { filter: none; transform: translate(0); }
+  10%  { filter: hue-rotate(30deg); transform: translate(-2px,1px); }
+  20%  { filter: hue-rotate(-30deg); transform: translate(2px,-1px); }
+  30%  { filter: saturate(2); transform: translate(-1px); }
+  40%  { filter: none; transform: translate(0); }
+  100% { filter: none; transform: translate(0); }
+}
+
+/* ─── Glitch Text ─── */
+.glitch-text {
   display: inline-block;
+  position: relative;
 }
-
-.glitch-logo::before,
-.glitch-logo::after {
+.glitch-text::before, .glitch-text::after {
   content: attr(data-text);
+  opacity: 0;
+  pointer-events: none;
+  width: 100%; height: 100%;
+  transition: opacity 0.1s;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: white;
+  top: 0; left: 0;
+}
+.glitch-text::before { color: #d90b00; z-index: -1; }
+.glitch-text::after  { color: #56bfa3; z-index: -1; }
+.glitch-text:hover::before { opacity: 0.7; animation: 0.4s steps(2,end) infinite glitchShiftLeft; }
+.glitch-text:hover::after  { opacity: 0.7; animation: 0.4s steps(2,end) infinite glitchShiftRight; }
+@keyframes glitchShiftLeft {
+  0% { transform: translate(0); }
+  25% { transform: translate(-3px,1px); }
+  50% { transform: translate(2px,-1px); }
+  75% { transform: translate(-1px,2px); }
+  100% { transform: translate(0); }
+}
+@keyframes glitchShiftRight {
+  0% { transform: translate(0); }
+  25% { transform: translate(3px,-1px); }
+  50% { transform: translate(-2px,1px); }
+  75% { transform: translate(1px,-2px); }
+  100% { transform: translate(0); }
 }
 
-.glitch-logo:hover::before {
-  left: 2px;
-  text-shadow: -2px 0 #ff00c1;
-  clip: rect(44px, 450px, 56px, 0);
-  animation: glitch-anim 5s infinite linear alternate-reverse;
+/* ─── Glitch Hover (cards) ─── */
+.glitch-hover { position: relative; overflow: hidden; }
+.glitch-hover::after {
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  border-radius: inherit;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(86,191,163,0.08) 2px 4px);
+  transition: opacity 0.3s;
+  position: absolute;
+  inset: 0;
+}
+.glitch-hover:hover::after { opacity: 1; animation: 0.3s steps(3,end) scanLines; }
+.glitch-hover:hover { animation: 0.3s steps(4,end) glitchJitter; }
+@keyframes glitchJitter {
+  0% { transform: translate(0); }
+  10% { transform: translate(-2px,1px); }
+  20% { transform: translate(2px,-1px); }
+  30% { transform: translate(-1px,-1px); }
+  40% { transform: translate(1px,1px); }
+  50% { transform: translate(0); }
+  100% { transform: translate(0); }
+}
+@keyframes scanLines {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 4px; }
 }
 
-.glitch-logo:hover::after {
-  left: -2px;
-  text-shadow: -2px 0 #00fff9, 2px 2px #ff00c1;
-  animation: glitch-anim2 1s infinite linear alternate-reverse;
+/* ─── Glitch Border (row links) ─── */
+.glitch-border { transition: box-shadow 0.3s; }
+.glitch-border:hover {
+  animation: borderGlitch 0.4s steps(3, end);
+  box-shadow: 2px 0 rgba(86,191,163,0.4), -2px 0 rgba(217,11,0,0.3), 0 0 20px rgba(86,191,163,0.06);
+}
+@keyframes borderGlitch {
+  0%  { box-shadow: 2px 0 rgba(86,191,163,0.4), -2px 0 rgba(217,11,0,0.3); }
+  25% { box-shadow: -2px 0 rgba(86,191,163,0.5), 3px 0 rgba(217,11,0,0.4); }
+  50% { box-shadow: 1px 1px rgba(86,191,163,0.3), -1px -1px rgba(217,11,0,0.2); }
+  75% { box-shadow: -3px 0 rgba(86,191,163,0.4), 2px 0 rgba(217,11,0,0.3); }
+  100% { box-shadow: 2px 0 rgba(86,191,163,0.4), -2px 0 rgba(217,11,0,0.3), 0 0 20px rgba(86,191,163,0.06); }
 }
 
-@keyframes glitch-anim {
-  0% { clip: rect(31px, 9999px, 94px, 0); }
-  20% { clip: rect(62px, 9999px, 42px, 0); }
-  40% { clip: rect(16px, 9999px, 78px, 0); }
-  60% { clip: rect(58px, 9999px, 43px, 0); }
-  80% { clip: rect(23px, 9999px, 98px, 0); }
-  100% { clip: rect(89px, 9999px, 5px, 0); }
+/* ─── Section Dark ─── */
+.section-dark {
+  background: var(--dark-bg);
+  color: #fff;
+  position: relative;
+  overflow: clip;
+}
+.section-dark .teal-orb {
+  filter: blur(60px);
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(86,191,163,0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  position: absolute;
 }
 
-@keyframes glitch-anim2 {
-  0% { clip: rect(65px, 9999px, 100px, 0); }
-  20% { clip: rect(30px, 9999px, 20px, 0); }
-  40% { clip: rect(50px, 9999px, 80px, 0); }
-  60% { clip: rect(20px, 9999px, 60px, 0); }
-  80% { clip: rect(90px, 9999px, 40px, 0); }
-  100% { clip: rect(10px, 9999px, 70px, 0); }
+/* ─── Teal Orb & Glow ─── */
+.teal-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
 }
+@keyframes tealPulse {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.7; }
+}
+.teal-glow { animation: tealPulse 6s ease-in-out infinite; }
 
-.glitch-logo:hover .glitch-text {
-  text-shadow: -2px 0 #ff00c1, 2px 2px #00fff9;
+/* ─── Dark bg for cards ─── */
+.bg-dark-bg { background-color: var(--dark-bg); }
+
+/* ─── Buttons ─── */
+.btn-primary {
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: #0a0a0a;
+  border: 2px solid #0a0a0a;
+  align-items: center;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-flex;
 }
+.btn-primary:hover { background: var(--accent-teal-deep); border-color: var(--accent-teal-deep); }
+
+.btn-teal {
+  background: var(--accent-teal);
+  color: #fff;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 2px solid var(--accent-teal);
+  align-items: center;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+  display: inline-flex;
+}
+.btn-teal:hover { background: var(--accent-teal-deep); border-color: var(--accent-teal-deep); }
+
+.btn-outline-dark {
+  color: #fff;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 1.5px solid rgba(255,255,255,0.3);
+  align-items: center;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s;
+  display: inline-flex;
+}
+.btn-outline-dark:hover { color: var(--accent-teal); background: rgba(255,255,255,0.06); border-color: var(--accent-teal); }
 
 .btn-outline {
-  @apply px-6 py-2 border-2 border-teal-deep text-teal-deep font-bold tracking-widest uppercase hover:bg-teal-deep hover:text-white transition-all duration-300 rounded-sm;
+  color: #0a0a0a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #0a0a0a;
+  align-items: center;
+  padding: 14px 32px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.btn-outline:hover { color: #fff; background: #0a0a0a; }
+
+/* ─── Scroll Reveal (is-revealed, not is-visible) ─── */
+.reveal-line { overflow: hidden; }
+.reveal-text {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: transform 1s cubic-bezier(0.19,1,0.22,1), opacity 0.8s cubic-bezier(0.19,1,0.22,1);
+  display: block;
+  transform: translateY(110%);
+}
+.reveal-text.is-revealed { opacity: 1; transform: translateY(0); }
+
+.reveal-fade {
+  opacity: 0;
+  will-change: transform, opacity;
+  transition: opacity 1s cubic-bezier(0.19,1,0.22,1), transform 1s cubic-bezier(0.19,1,0.22,1);
+  transform: translateY(30px);
+}
+.reveal-fade.is-revealed { opacity: 1; transform: translateY(0); }
+
+/* ─── Line Trace ─── */
+.line-trace-container { position: relative; }
+.line-trace-corner { pointer-events: none; opacity: 0; position: absolute; }
+.line-trace-tl {
+  border-top: 2px solid #0a0a0a;
+  border-left: 2px solid #0a0a0a;
+  width: 0; height: 0;
+  top: -8px; left: -8px;
+}
+.line-trace-br {
+  border-bottom: 2px solid #0a0a0a;
+  border-right: 2px solid #0a0a0a;
+  width: 0; height: 0;
+  bottom: -8px; right: -8px;
+}
+.line-trace-active .line-trace-tl {
+  opacity: 1; width: 32px; height: 32px;
+  transition: width 0.6s cubic-bezier(0.16,1,0.3,1), height 0.6s cubic-bezier(0.16,1,0.3,1) 0.1s, opacity 0.3s ease-out;
+}
+.line-trace-active .line-trace-br {
+  opacity: 1; width: 32px; height: 32px;
+  transition: width 0.6s cubic-bezier(0.16,1,0.3,1) 0.2s, height 0.6s cubic-bezier(0.16,1,0.3,1) 0.3s, opacity 0.3s ease-out 0.2s;
+}
+
+/* ─── Hero Animations (triggered by .hero-ready class) ─── */
+.hero-animate-label,
+.hero-animate-h1-1,
+.hero-animate-h1-2,
+.hero-animate-body,
+.hero-animate-video,
+.hero-animate-bar {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.hero-animate-bar .border-t-2 {
+  transform-origin: 0;
+  transform: scaleX(0);
+}
+
+@keyframes heroFadeIn {
+  0%   { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroVideoReveal {
+  0%   { opacity: 0; clip-path: inset(0 100% 0 0); }
+  100% { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+@keyframes heroLineExpand {
+  0%   { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+.hero-ready .hero-animate-label { animation: heroFadeIn 0.8s cubic-bezier(0.16,1,0.3,1) 0.15s forwards; }
+.hero-ready .hero-animate-h1-1  { animation: heroFadeIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.30s forwards; }
+.hero-ready .hero-animate-h1-2  { animation: heroFadeIn 0.9s cubic-bezier(0.16,1,0.3,1) 0.50s forwards; }
+.hero-ready .hero-animate-body  { animation: heroFadeIn 0.8s cubic-bezier(0.16,1,0.3,1) 0.70s forwards; }
+.hero-ready .hero-animate-video { animation: heroVideoReveal 1.2s cubic-bezier(0.16,1,0.3,1) 0.50s forwards; }
+.hero-ready .hero-animate-bar   { animation: heroFadeIn 0.6s ease-out 1.0s forwards; }
+.hero-ready .hero-animate-bar .border-t-2 { animation: heroLineExpand 0.8s cubic-bezier(0.16,1,0.3,1) 1.1s forwards; }
+
+/* ─── Glass ─── */
+.glass {
+  background: rgba(219,219,219,0.3);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 24px;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--background); }
+::-webkit-scrollbar-thumb { background: #aaa; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-teal); }
+
+/* ─── Selection ─── */
+::selection { color: #000; background: rgba(86,191,163,0.25); }
+
+/* ─── Section Specific Typography (Ref Parity) ─── */
+.section-dark p {
+  font-size: 1.25rem !important; /* 20px */
+  line-height: 1.75rem !important;
+  max-width: 42rem !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+@media (max-width: 768px) {
+  .section-dark p {
+    font-size: 1.125rem !important; /* 18px on mobile */
+    line-height: 1.625rem !important;
+  }
 }

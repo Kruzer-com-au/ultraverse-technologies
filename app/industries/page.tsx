@@ -1,11 +1,21 @@
+'use client'
+
+import React from 'react'
+import ProductHero from '@/components/sections/product/ProductHero'
+import IndustryListing from '@/components/sections/industry/IndustryListing'
+import { industriesData } from '@/data/industries/listing'
 
 export default function IndustriesPage() {
   return (
-    <div className="py-24 px-6 max-w-7xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8 capitalize">Industries</h1>
-      <p className="text-gray-400 text-lg">
-        This is the Industries page content. It is part of the scalable Ultraverse ecosystem.
-      </p>
-    </div>
-  );
+    <main className="flex-1 bg-background">
+      <ProductHero 
+        label="Industries"
+        title="Impact at Scale"
+        description="Ultraverse technologies provide the foundational layer for critical sectors. We build the privacy-first infrastructure that powers the world's most innovative industries."
+        hideCtas={true}
+      />
+
+      <IndustryListing industries={industriesData} />
+    </main>
+  )
 }
