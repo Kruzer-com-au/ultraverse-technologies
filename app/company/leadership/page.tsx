@@ -67,15 +67,13 @@ export default function LeadershipPage() {
           </p>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <ProductVisuals 
+            <ProductVisuals
               primary={{ label: '600 × 400', sublabel: 'Leadership Team', aspectRatio: '600/400' }}
               bgClass="bg-background"
-              className="p-0"
             />
-            <ProductVisuals 
+            <ProductVisuals
               primary={{ label: '600 × 400', sublabel: 'Board Room', aspectRatio: '600/400' }}
               bgClass="bg-background"
-              className="p-0"
             />
           </div>
         </div>
