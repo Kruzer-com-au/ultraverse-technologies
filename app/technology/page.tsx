@@ -116,7 +116,11 @@ export default function TechnologyPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Technology Infrastructure' }}
+        primary={{ 
+          label: '1400 × 600', 
+          sublabel: 'Technology Infrastructure',
+          src: '/images/TECHNOLOGYINFRASTRUCTURE.jpg'
+        }}
       />
 
       <ProductFeatureList
@@ -138,6 +142,7 @@ export default function TechnologyPage() {
             label="800 × 500" 
             sublabel="ZKP Circuit Architecture" 
             aspectRatio="800/500"
+            src="/images/SERVERROOM.jpg"
           />
         </ScrollReveal>
       </ProductInfoGrid>

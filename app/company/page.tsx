@@ -8,6 +8,8 @@ import ProductCTA from '@/components/sections/product/ProductCTA'
 import ProductVisuals from '@/components/sections/product/ProductVisuals'
 import ProductProblemSection from '@/components/sections/product/ProductProblemSection'
 import ProductLinkList from '@/components/sections/product/ProductLinkList'
+import ProductProcessList from '@/components/sections/product/ProductProcessList'
+import { leadershipTeam } from '@/data/leadership'
 import TechnicalPlaceholder from '@/components/ui/TechnicalPlaceholder'
 
 const threePillars = [
@@ -47,51 +49,61 @@ const learnMore = [
 export default function CompanyPage() {
   return (
     <main className="flex-1 bg-background">
-      <ProductHero 
+      <ProductHero
         label="Company"
         title="About ULTRAVERSE"
-        description="We build technology that puts people first."
-      />
-
-      <section className="py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden bg-background">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
-            <div className="lg:col-span-6">
-              <ScrollReveal>
-                <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6">Our Mission</p>
-                <h2 className="editorial-heading text-[clamp(1.8rem,3.5vw,3.5rem)] text-white">
-                  Unite AR and crypto in one ecosystem to deliver highquality gameplay that reconnects friends and families.
-                </h2>
-              </ScrollReveal>
+        description="We built ULTRAVERSE on the belief that the most powerful technology solves genuine human problems."
+        hideCtas={true}
+      >
+        <ScrollReveal delay={0.3}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Gift of Giving</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Technology that creates value and gives it back to the community.</p>
             </div>
-            <div className="lg:col-span-6">
-              <ScrollReveal delay={0.1}>
-                <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6">Our Vision</p>
-                <h2 className="editorial-heading text-[clamp(1.8rem,3.5vw,3.5rem)] text-white">
-                  Technology that brings people closer, turning digital moments into shared memories with global financial impact.
-                </h2>
-              </ScrollReveal>
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Reconnecting People</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Every product designed to bring people closer in the real world.</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Quality of Time</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Focusing on moments that matter, not just minutes spent digitally.</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Reducing Poverty</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Creating real earning opportunities through real-world gameplay.</p>
             </div>
           </div>
-        </div>
-      </section>
+        </ScrollReveal>
+      </ProductHero>
 
-      <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'ULTRAVERSE Headquarters' }}
+      <ProductVisuals
+        primary={{ 
+          label: '1400 × 600', 
+          sublabel: 'ULTRAVERSE Headquarters',
+          src: '/images/ULTRAVERSEHEADQUARTERS.png'
+        }}
         bgClass="bg-background"
       />
 
-      <ProductFeatureList 
+      <ProductFeatureList
         label="What We Do"
         title="Three Pillars of Innovation"
         description="ULTRAVERSE operates across three interconnected verticals, each reinforcing the others."
         features={threePillars}
       />
 
-      <ProductVisuals 
-        grid={[{ label: '800 × 500', sublabel: 'Team Photo', aspectRatio: '800/500' }]}
+      <ProductVisuals
+        grid={[{ 
+          label: '800 × 500', 
+          sublabel: 'Team Photo', 
+          aspectRatio: '800/500',
+          src: '/images/TEAMPHOTO.jpg'
+        }]}
         bgClass="bg-background"
       />
+
+
 
       <section className="section-dark py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
         <div className="teal-orb absolute top-1/4 right-0 w-[600px] h-[600px] opacity-20 teal-glow" />
@@ -117,14 +129,18 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
-
-      <ProductLinkList 
+      <ProductProcessList
+        label="Leadership"
+        title="The Team"
+        items={leadershipTeam}
+      />
+      {/* <ProductLinkList 
         title="Learn More"
         description="Explore the people, opportunities, and partnerships behind ULTRAVERSE."
         items={learnMore}
-      />
+      /> */}
 
-      <ProductCTA 
+      <ProductCTA
         title="Ready to Build With ULTRAVERSE?"
         description="Talk to our team about how our technology and products can power your next initiative."
         ctaText="Get in Touch"

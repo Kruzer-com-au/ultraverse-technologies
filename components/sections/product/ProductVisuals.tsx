@@ -8,6 +8,7 @@ interface VisualItem {
   label: string
   sublabel: string
   aspectRatio?: string
+  src?: string
 }
 
 interface ProductVisualsProps {
@@ -30,6 +31,7 @@ export default function ProductVisuals({
               label={primary.label} 
               sublabel={primary.sublabel} 
               aspectRatio={primary.aspectRatio || '1400/600'} 
+              src={primary.src}
             />
           </ScrollReveal>
         )}
@@ -42,6 +44,7 @@ export default function ProductVisuals({
                   label={item.label} 
                   sublabel={item.sublabel} 
                   aspectRatio={item.aspectRatio || '600/400'} 
+                  src={item.src}
                 />
               </ScrollReveal>
             ))}

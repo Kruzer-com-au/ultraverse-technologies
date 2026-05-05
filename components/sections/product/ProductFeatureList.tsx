@@ -14,13 +14,25 @@ export interface Feature {
   linkHref?: string
 }
 
+import FeatureGrid from '@/components/ui/FeatureGrid'
+import EditorialQuote from '@/components/ui/EditorialQuote'
+
 interface ProductFeatureListProps {
   label: string
   title: string
   description: string
   features: Feature[]
   theme?: 'light' | 'dark'
-  children?: React.ReactNode // For optional placeholders like the large UI image
+  layout?: 'list' | 'grid'
+  children?: React.ReactNode
+  subGrid?: {
+    title: string
+    items: { title: string; desc: string }[]
+  }
+  quote?: {
+    text: string
+    label: string
+  }
 }
 
 export default function ProductFeatureList({
@@ -29,9 +41,13 @@ export default function ProductFeatureList({
   description,
   features,
   theme = 'light',
-  children
+  layout = 'list',
+  children,
+  subGrid,
+  quote
 }: ProductFeatureListProps) {
   const isDark = theme === 'dark'
+  const isGrid = layout === 'grid'
   
   return (
     <section className={`py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
@@ -44,9 +60,11 @@ export default function ProductFeatureList({
             <h2 className={`editorial-heading text-[clamp(2rem,5vw,5rem)] ${isDark ? 'text-white' : 'text-text-primary'} mb-6 uppercase`}>
               {title}
             </h2>
-            <p className={`${isDark ? 'text-white/60' : 'editorial-body text-text-secondary'} text-sm md:text-base max-w-2xl leading-relaxed`}>
-              {description}
-            </p>
+            {description && (
+              <p className={`${isDark ? 'text-white/60' : 'editorial-body text-text-secondary'} text-sm md:text-base max-w-2xl leading-relaxed`}>
+                {description}
+              </p>
+            )}
           </ScrollReveal>
         </div>
 
@@ -56,67 +74,102 @@ export default function ProductFeatureList({
           </div>
         )}
 
-        <div className="space-y-0">
-          {features.map((item, idx) => (
-            <ScrollReveal key={item.num} delay={idx * 0.05}>
-              <div className={`border-t ${isDark ? 'border-white/10' : 'border-black/10'} py-8 lg:py-10`}>
-                <div className="grid grid-cols-12 gap-4 lg:gap-8 items-start">
-                  <div className="col-span-2 lg:col-span-1">
-                    <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{item.num}</span>
-                  </div>
-                  
-                  <div className="col-span-10 lg:col-span-4">
-                    {item.sublabel && (
-                      <p className="editorial-uppercase text-accent-teal text-[10px] tracking-[0.15em] mb-2">{item.sublabel}</p>
-                    )}
-                    <h3 className={`editorial-heading text-xl lg:text-2xl ${isDark ? 'text-white' : 'text-text-primary'} uppercase`}>
+        {isGrid ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 lg:gap-x-16 gap-y-12">
+            {features.map((item, idx) => (
+              <ScrollReveal key={item.num} delay={idx * 0.05}>
+                <div className={`flex flex-col items-start gap-4 border-l ${isDark ? 'border-white/10' : 'border-black/10'} pl-6`}>
+                  <span className="editorial-uppercase text-accent-teal text-[10px] md:text-xs font-bold tracking-[0.2em] tabular-nums">
+                    {item.num}
+                  </span>
+                  <div className="space-y-2">
+                    <h3 className={`editorial-heading text-lg ${isDark ? 'text-white' : 'text-text-primary'} uppercase leading-tight`}>
                       {item.title}
                     </h3>
-                  </div>
-
-                  <div className={`col-span-12 ${item.tags ? 'lg:col-span-4 lg:col-start-5' : 'lg:col-span-6 lg:col-start-7'}`}>
-                    <p className={`${isDark ? 'text-white/60' : 'text-text-secondary'} text-sm leading-relaxed ${item.bullets ? 'mb-6' : ''}`}>
+                    <p className={`${isDark ? 'text-white/60' : 'text-text-secondary'} text-[13px] leading-relaxed`}>
                       {item.desc}
                     </p>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
+        ) : (
+          <div className="space-y-0">
+            {features.map((item, idx) => (
+              <ScrollReveal key={item.num} delay={idx * 0.05}>
+                <div className={`border-t ${isDark ? 'border-white/10' : 'border-black/10'} py-8 lg:py-10`}>
+                  <div className="grid grid-cols-12 gap-4 lg:gap-8 items-start">
+                    <div className="col-span-2 lg:col-span-1">
+                      <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{item.num}</span>
+                    </div>
                     
-                    {item.bullets && (
-                      <ul className="space-y-3">
-                        {item.bullets.map((bullet, bIdx) => (
-                          <li key={bIdx} className={`flex items-start gap-3 text-sm ${isDark ? 'text-white/60' : 'text-text-secondary'}`}>
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-1.5 shrink-0" />
-                            {bullet}
-                          </li>
+                    <div className="col-span-10 lg:col-span-4">
+                      {item.sublabel && (
+                        <p className="editorial-uppercase text-accent-teal text-[10px] tracking-[0.15em] mb-2">{item.sublabel}</p>
+                      )}
+                      <h3 className={`editorial-heading text-xl lg:text-2xl ${isDark ? 'text-white' : 'text-text-primary'} uppercase`}>
+                        {item.title}
+                      </h3>
+                    </div>
+
+                    <div className={`col-span-12 ${item.tags ? 'lg:col-span-4 lg:col-start-5' : 'lg:col-span-6 lg:col-start-7'}`}>
+                      <p className={`${isDark ? 'text-white/60' : 'text-text-secondary'} text-sm leading-relaxed ${item.bullets ? 'mb-6' : ''}`}>
+                        {item.desc}
+                      </p>
+                      
+                      {item.bullets && (
+                        <ul className="space-y-3">
+                          {item.bullets.map((bullet, bIdx) => (
+                            <li key={bIdx} className={`flex items-start gap-3 text-sm ${isDark ? 'text-white/60' : 'text-text-secondary'}`}>
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-1.5 shrink-0" />
+                              {bullet}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+
+                    {item.tags && (
+                      <div className="col-span-12 lg:col-span-3 lg:col-start-10 flex flex-wrap gap-2">
+                        {item.tags.map(tag => (
+                          <span key={tag} className={`editorial-uppercase text-[10px] tracking-[0.12em] border border-black/10 px-3 py-1 ${isDark ? 'text-accent-teal/70 border-white/10' : 'text-text-muted'}`}>
+                            {tag}
+                          </span>
                         ))}
-                      </ul>
+                      </div>
+                    )}
+
+                    {item.linkText && item.linkHref && (
+                      <div className="col-span-12 lg:col-span-1 lg:col-start-12 flex lg:justify-end mt-4 lg:mt-0">
+                        <a 
+                          href={item.linkHref} 
+                          className={`text-sm font-medium inline-flex items-center gap-1 transition-all duration-700 hover:gap-2 ${isDark ? 'text-white hover:text-accent-teal' : 'text-text-primary hover:text-accent-teal'}`}
+                        >
+                          {item.linkText} <span aria-hidden="true">→</span>
+                        </a>
+                      </div>
                     )}
                   </div>
-
-                  {item.tags && (
-                    <div className="col-span-12 lg:col-span-3 lg:col-start-10 flex flex-wrap gap-2">
-                      {item.tags.map(tag => (
-                        <span key={tag} className={`editorial-uppercase text-[10px] tracking-[0.12em] border border-black/10 px-3 py-1 ${isDark ? 'text-accent-teal/70 border-white/10' : 'text-text-muted'}`}>
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-
-                  {item.linkText && item.linkHref && (
-                    <div className="col-span-12 lg:col-span-1 lg:col-start-12 flex lg:justify-end mt-4 lg:mt-0">
-                      <a 
-                        href={item.linkHref} 
-                        className={`text-sm font-medium inline-flex items-center gap-1 transition-all duration-700 hover:gap-2 ${isDark ? 'text-white hover:text-accent-teal' : 'text-text-primary hover:text-accent-teal'}`}
-                      >
-                        {item.linkText} <span aria-hidden="true">→</span>
-                      </a>
-                    </div>
-                  )}
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
-          <div className={`border-t ${isDark ? 'border-white/10' : 'border-black/10'}`}></div>
-        </div>
+              </ScrollReveal>
+            ))}
+            <div className={`border-t ${isDark ? 'border-white/10' : 'border-black/10'}`}></div>
+          </div>
+        )}
+
+        {subGrid && (
+          <FeatureGrid title={subGrid.title} items={subGrid.items} isDark={isDark} />
+        )}
+
+        {quote && (
+          <EditorialQuote 
+            text={quote.text}
+            label={quote.label}
+            sublabel={`ULTRAVERSE approach to ${label.toLowerCase()} technology`}
+            isDark={isDark}
+          />
+        )}
       </div>
     </section>
   )

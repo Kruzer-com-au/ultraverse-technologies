@@ -12,13 +12,13 @@ interface IndustriesSectionProps {
 
 export default function IndustriesSection({ industries }: IndustriesSectionProps) {
   return (
-    <section className="py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden bg-[#d4d4d4]">
+    <section className="py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="mb-24 lg:mb-32">
           <ScrollReveal>
             <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-8">Verticals</p>
             <h2 className="editorial-heading text-[clamp(2.5rem,7vw,7rem)] text-white mb-6 uppercase tracking-tight leading-[0.9] max-w-5xl">
-              Technology that adapts to your industry
+              Solutions Across Industries
             </h2>
           </ScrollReveal>
         </div>
@@ -34,9 +34,9 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
                   <h3 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white group-hover:text-accent-teal transition-colors duration-700 uppercase leading-none mb-4">
                     {ind.title}
                   </h3>
-                  <p className="editorial-body text-black/50 text-sm md:text-base max-w-2xl leading-relaxed">
+                  {/* <p className="editorial-body text-black/50 text-sm md:text-base max-w-2xl leading-relaxed">
                     {ind.desc}
-                  </p>
+                  </p> */}
                 </div>
                 <div className="mt-8 md:mt-0 flex shrink-0">
                   <ArrowRight />
