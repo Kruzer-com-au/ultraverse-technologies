@@ -60,7 +60,7 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="font-bold text-xs uppercase mb-4 text-text-primary">Products</h3>
+            <h3 className="font-normal !text-[18px] uppercase mb-4 text-text-primary leading-[16px] !tracking-[0.30px]">Products</h3>
             <ul className="space-y-2">
               {footerNavigation.products.map((item) => (
                 <li key={item.name}>
@@ -74,15 +74,15 @@ export default function Footer() {
 
           {/* Solutions */}
           <div>
-            <h3 className="font-bold text-xs uppercase mb-4 text-text-primary">Solutions</h3>
+            <h3 className="font-normal !text-[18px] uppercase mb-4 text-text-primary leading-[16px] !tracking-[0.30px]">Solutions</h3>
             <ul className="space-y-2">
               {footerNavigation.solutions.map((item) => (
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm text-text-secondary hover:text-teal-deep transition-colors">
-                    {item.name}       
+                    {item.name}
 
 
-                    
+
                   </Link>
                 </li>
               ))}
@@ -91,7 +91,7 @@ export default function Footer() {
 
           {/* Industries */}
           <div>
-            <h3 className="font-bold text-xs uppercase mb-4 text-text-primary">Industries</h3>
+            <h3 className="font-normal !text-[18px] uppercase mb-4 text-text-primary leading-[16px] !tracking-[0.30px]">Industries</h3>
             <ul className="space-y-2">
               {footerNavigation.industries.map((item) => (
                 <li key={item.name}>
@@ -105,7 +105,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="font-bold text-xs uppercase mb-4 text-text-primary">Company</h3>
+            <h3 className="font-normal !text-[18px] uppercase mb-4 text-text-primary leading-[16px] !tracking-[0.30px]">Company</h3>
             <ul className="space-y-2">
               {footerNavigation.company.map((item) => (
                 <li key={item.name}>

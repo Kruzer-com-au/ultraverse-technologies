@@ -14,6 +14,7 @@ interface ProductHeroProps {
   secondaryCtaHref?: string
   companyName?: string
   hideCtas?: boolean
+  children?: React.ReactNode
 }
 
 export default function ProductHero({
@@ -25,7 +26,8 @@ export default function ProductHero({
   secondaryCtaText = 'View All Products',
   secondaryCtaHref = '/products',
   companyName = 'Kruzer Ultraverse Pty Ltd',
-  hideCtas = false
+  hideCtas = false,
+  children
 }: ProductHeroProps) {
   return (
     <section className="relative min-h-[60vh] md:min-h-[70vh] flex flex-col justify-end pt-32 pb-12 md:pb-16 lg:pb-24 px-6 lg:px-12 overflow-hidden bg-background">
@@ -57,6 +59,12 @@ export default function ProductHero({
             </div>
           </ScrollReveal>
         )}
+
+        {children && (
+          <div className="mb-16">
+            {children}
+          </div>
+        )}
         
         <ScrollReveal delay={0.4}>
           <div className="pt-6">
@@ -67,3 +75,4 @@ export default function ProductHero({
     </section>
   )
 }
+

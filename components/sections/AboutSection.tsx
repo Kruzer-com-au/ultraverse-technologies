@@ -65,8 +65,8 @@ export default function AboutSection() {
             <ScrollReveal className="relative w-full h-full flex items-center justify-center" delay={0.2}>
               <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
                 <Image
-                  src="/geodesic_sphere_wireframe_1777620531121.png"
-                  alt="Geodesic Sphere"
+                  src="/images/dd.png"
+                  alt="Ultraverse Visual"
                   fill
                   className="object-contain opacity-80"
                 />

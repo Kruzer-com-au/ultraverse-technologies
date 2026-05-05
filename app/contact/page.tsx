@@ -38,7 +38,11 @@ export default function ContactPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Office Location' }}
+        primary={{ 
+          label: '1400 × 600', 
+          sublabel: 'Office Location',
+          src: '/images/OFFICELOCATION.png'
+        }}
         bgClass="bg-background"
       />
 
@@ -201,6 +205,7 @@ export default function ContactPage() {
                     label="600 × 400" 
                     sublabel="Contact Team" 
                     aspectRatio="600/400"
+                    src="/images/CONTACTTEAM.jpg"
                   />
                 </div>
               </ScrollReveal>

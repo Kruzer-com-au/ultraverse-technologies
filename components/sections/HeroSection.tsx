@@ -4,8 +4,9 @@ import type { HeroFeature } from '@/lib/home-data'
 
 interface HeroSectionProps {
   tagline: string
-  lines: string[]          // first N lines (dark), last line handled via accentLine
-  accentLine: string       // teal line
+  lines: string[]
+  accentLine?: string
+  description?: string
   features: HeroFeature[]
   company?: string
   year?: string
@@ -15,6 +16,7 @@ export default function HeroSection({
   tagline,
   lines,
   accentLine,
+  description,
   features,
   company = 'Kruzer Ultraverse Pty Ltd',
   year = '2026',
@@ -36,27 +38,27 @@ export default function HeroSection({
               {tagline}
             </p>
 
-            {/* Main lines */}
-            {lines.map((line, i) => (
-              <h1 key={i} className="hero-animate-h1-1 editorial-display text-[clamp(2.2rem,7vw,8rem)] text-white  leading-[0.9] mb-1">
-                {line}
-              </h1>
-            ))}
-
-            {/* Accent line */}
-            <h1 className="hero-animate-h1-2 editorial-display text-[clamp(2.2rem,7vw,8rem)] text-white  leading-[0.9] mb-8 lg:mb-14">
-              {accentLine}
+            {/* Main Headlines - Single H1, no spans, natural wrapping */}
+            <h1 className="hero-animate-h1-1 editorial-display text-[clamp(2.2rem,7vw,8rem)] text-white leading-[0.95] mb-12 lg:mb-20 uppercase">
+              {lines.join(' ')} {accentLine ? accentLine : ''}
             </h1>
 
+            {/* Description - ordinary p tag */}
+            {description && (
+              <p className="hero-animate-body editorial-body text-[var(--text-secondary)] text-lg md:text-xl lg:text-2xl max-w-4xl mb-12 lg:mb-16 leading-relaxed">
+                {description}
+              </p>
+            )}
+
             {/* Feature callouts */}
-            <div className="hero-animate-body max-w-4xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-4 lg:gap-y-5">
-                {features.map(({ num, text, align }) => (
-                  <div key={num} className={`flex items-start gap-3 md:gap-4 ${align === 'right' ? 'lg:justify-end lg:text-right' : ''}`}>
-                    <span className={`editorial-uppercase text-[var(--accent-teal)] text-[10px] md:text-xs font-bold tracking-[0.2em] mt-[0.35em] shrink-0 tabular-nums ${align === 'right' ? 'lg:order-2' : ''}`}>
+            <div className="hero-animate-body max-w-full">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 lg:gap-x-16 gap-y-8 lg:gap-y-0">
+                {features.map(({ num, text }) => (
+                  <div key={num} className="flex flex-col items-start gap-4 border-l border-black/10 pl-6">
+                    <span className="editorial-uppercase text-[var(--accent-teal)] text-[10px] md:text-xs font-bold tracking-[0.2em] tabular-nums">
                       {num}
                     </span>
-                    <span className={`text-[var(--text-primary)] text-sm md:text-base lg:text-lg font-medium tracking-[0.01em] leading-relaxed ${align === 'right' ? 'lg:order-1' : ''}`}>
+                    <span className="text-[var(--text-primary)] text-sm md:text-base lg:text-[15px] font-medium tracking-[0.01em] leading-relaxed max-w-[300px]">
                       {text}<span className="text-[var(--accent-teal)] font-black text-[1.2em] ml-[0.05em]">.</span>
                     </span>
                   </div>
