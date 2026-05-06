@@ -51,8 +51,25 @@ export default function CompanyPage() {
   return (
     <main className="flex-1 bg-background">
       <ProductHero
+      <ProductHero
         label="Company"
         title="About ULTRAVERSE"
+        description="We built ULTRAVERSE on the belief that the most powerful technology solves genuine human problems."
+        hideCtas={true}
+      >
+        <ScrollReveal delay={0.3}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Gift of Giving</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Technology that creates value and gives it back to the community.</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Reconnecting People</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Every product designed to bring people closer in the real world.</p>
+            </div>
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Quality of Time</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Focusing on moments that matter, not just minutes spent digitally.</p>
         description="We built ULTRAVERSE on the belief that the most powerful technology solves genuine human problems."
         hideCtas={true}
       >
@@ -73,8 +90,13 @@ export default function CompanyPage() {
             <div className="space-y-4">
               <h3 className="editorial-heading text-lg text-text-primary">Reducing Poverty</h3>
               <p className="text-text-secondary text-[13px] leading-relaxed">Creating real earning opportunities through real-world gameplay.</p>
+            <div className="space-y-4">
+              <h3 className="editorial-heading text-lg text-text-primary">Reducing Poverty</h3>
+              <p className="text-text-secondary text-[13px] leading-relaxed">Creating real earning opportunities through real-world gameplay.</p>
             </div>
           </div>
+        </ScrollReveal>
+      </ProductHero>
         </ScrollReveal>
       </ProductHero>
 
@@ -84,9 +106,16 @@ export default function CompanyPage() {
           sublabel: 'ULTRAVERSE Headquarters',
           src: '/images/ULTRAVERSEHEADQUARTERS.png'
         }}
+      <ProductVisuals
+        primary={{ 
+          label: '1400 × 600', 
+          sublabel: 'ULTRAVERSE Headquarters',
+          src: '/images/ULTRAVERSEHEADQUARTERS.png'
+        }}
         bgClass="bg-background"
       />
 
+      <ProductFeatureList
       <ProductFeatureList
         label="What We Do"
         title="Three Pillars of Innovation"
@@ -101,8 +130,17 @@ export default function CompanyPage() {
           aspectRatio: '800/500',
           src: '/images/TEAMPHOTO.jpg'
         }]}
+      <ProductVisuals
+        grid={[{ 
+          label: '800 × 500', 
+          sublabel: 'Team Photo', 
+          aspectRatio: '800/500',
+          src: '/images/TEAMPHOTO.jpg'
+        }]}
         bgClass="bg-background"
       />
+
+
 
 
 
@@ -140,7 +178,9 @@ export default function CompanyPage() {
         description="Explore the people, opportunities, and partnerships behind ULTRAVERSE."
         items={learnMore}
       /> */}
+      /> */}
 
+      <ProductCTA
       <ProductCTA
         title="Ready to Build With ULTRAVERSE?"
         description="Talk to our team about how our technology and products can power your next initiative."

@@ -161,6 +161,16 @@ h4.sub-head {
 
 }
 
+h3 {
+  font-family: inherit;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff !important;
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem); /* 2.5rem = 40px */
+}
+
 .editorial-uppercase {
   text-transform: uppercase;
   letter-spacing: -0.03em;
