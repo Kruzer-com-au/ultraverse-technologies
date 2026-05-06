@@ -100,10 +100,22 @@ export default function UltraDataPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Sensor Network Dashboard' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Sensor Network Dashboard', 
+          src: '/images/products/Sensor_Network_Dashboard.jpg' 
+        }}
         grid={[
-          { label: '600 × 400', sublabel: 'City Data Heatmap' },
-          { label: '600 × 400', sublabel: 'Digital Twin Model' }
+          { 
+            label: '', 
+            sublabel: 'City Data Heatmap', 
+            src: '/images/products/City_Data_Heatmap.jpg' 
+          },
+          { 
+            label: '', 
+            sublabel: 'Digital Twin Model', 
+            src: '/images/products/Digital_Twin_Model.jpg' 
+          }
         ]}
       />
 

@@ -42,22 +42,22 @@ export const entertainmentData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "1400 × 600",
+      label: "",
       sublabel: "Live Concert Event",
       aspectRatio: "1400/600",
-      src: "/images/industries/live-concert.png",
+      src: "/images/industries/LIVE_CONCERT_EVENT.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Artist Fan Platform",
       aspectRatio: "800/500",
-      src: "/images/industries/artist-platform.png",
+      src: "/images/industries/ARTIST_FAN_PLATFORM.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Immersive Venue Experience",
       aspectRatio: "800/500",
-      src: "/images/industries/immersive-venue.png",
+      src: "/images/industries/mr_kruzer_mmersive_venue_experience.jpg",
     },
   ],
   products: {

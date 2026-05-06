@@ -40,6 +40,39 @@ const ecosystemPillars = [
   { num: '03', title: 'Player Identity', desc: 'Maintain a single persistent identity across multiple experiences, carrying your reputation and companions everywhere you go.' }
 ]
 
+const enterpriseApplications = [
+  {
+    num: '01',
+    title: 'IP Licensing',
+    desc: 'License any title within the Ultraverse ecosystem — game mechanics, characters, and technology — for branded entertainment, marketing, and co-branded products.'
+  },
+  {
+    num: '02',
+    title: 'Co-Development Partnerships',
+    desc: 'Partner with ULTRAVERSE to co-develop custom experiences built on proven Ultraverse frameworks across gaming, spatial computing, and interactive narrative.'
+  },
+  {
+    num: '03',
+    title: 'Branded In-Game Experiences',
+    desc: 'Integrate your brand into the Ultraverse world through sponsored events, branded activations, and in-game placements across all four titles.'
+  },
+  {
+    num: '04',
+    title: 'Location-Based Activations',
+    desc: 'Drive foot traffic and real-world engagement through geo-fenced AR events, territory-based competitions, and destination experiences tied to physical locations.'
+  },
+  {
+    num: '05',
+    title: 'White-Label Deployment',
+    desc: 'Deploy Ultraverse technology under your own brand for tourism, hospitality, corporate events, and enterprise applications.'
+  },
+  {
+    num: '06',
+    title: 'Media & Franchise Opportunities',
+    desc: 'The Ultraverse universe is designed for expansion into animation, series, merchandise, and transmedia storytelling across all four properties.'
+  }
+]
+
 export default function UltraVersePage() {
   return (
     <main className="flex-1 bg-background">
@@ -73,9 +106,17 @@ export default function UltraVersePage() {
         columns={3}
       />
 
+      <ProductFeatureList
+        label="Enterprise Applications"
+        title="Enterprise Applications"
+        description="Six pathways for brands, studios, and enterprise partners to integrate with and build upon the Ultraverse ecosystem."
+        features={enterpriseApplications}
+        theme="dark"
+      />
+
       <ProductCTA 
-        title="Ready to Build in the Ultraverse?"
-        description="Talk to our team about game licensing, IP partnerships, or spatial computing deployments."
+        title="Interested in Ultraverse?"
+        description="Explore IP licensing, co-development partnerships, and enterprise activation opportunities."
         ctaText="Get in Touch"
       />
     </main>

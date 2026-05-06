@@ -124,7 +124,11 @@ export default function PrivacyCompliancePage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Zero-Knowledge Proof Architecture' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Zero-Knowledge Proof Architecture', 
+          src: '/images/solutions/ZERO-KNOWLEDGE_PROOF_ARCHITECTURE.jpg' 
+        }}
       />
 
       <ProductProcessList
@@ -138,7 +142,12 @@ export default function PrivacyCompliancePage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '800 × 500', sublabel: 'Compliance Dashboard Interface', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Compliance Dashboard Interface', 
+          aspectRatio: '800/500',
+          src: '/images/solutions/COMPLIANCE_DASHBOARD_INTERFACE.jpg' 
+        }}
         bgClass="bg-background"
       />
 

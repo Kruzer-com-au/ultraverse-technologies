@@ -42,22 +42,22 @@ export const healthcareData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "1400 × 600",
+      label: "",
       sublabel: "Telehealth Consultation",
       aspectRatio: "1400/600",
-      src: "/images/industries/telehealth.png",
+      src: "/images/industries/TELEHEALTH_CONSULTATION.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Hospital Tech Infrastructure",
       aspectRatio: "800/500",
-      src: "/images/industries/hospital-tech.png",
+      src: "/images/industries/HOSPITAL_TECH_INFRASTRUCTURE.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Medical Education Stream",
       aspectRatio: "800/500",
-      src: "/images/industries/medical-edu.png",
+      src: "/images/industries/MEDICAL_EDUCATION_STREAM.jpg",
     },
   ],
   products: {

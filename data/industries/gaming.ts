@@ -42,16 +42,16 @@ export const gamingData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Gaming Studio",
       aspectRatio: "800/500",
-      src: "/images/industries/gaming-studio.png",
+      src: "/images/industries/gaming_studio.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Esports Tournament",
       aspectRatio: "800/500",
-      src: "/images/industries/esports-tournament.png",
+      src: "/images/industries/esports_tournament.jpg",
     },
   ],
   products: {

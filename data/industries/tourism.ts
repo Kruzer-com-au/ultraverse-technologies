@@ -189,22 +189,22 @@ export const tourismData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "1400 × 600",
+      label: "",
       sublabel: "Heritage Site AR Experience",
       aspectRatio: "1400/600",
-      src: "/images/industries/heritage-ar.png",
+      src: "/images/industries/HERITAGE_SITE_AR_EXPERIENCE.jpg",
     },
     {
-      label: "800 × 500",
-      sublabel: "Cruise Ship Entertainment",
-      aspectRatio: "800/500",
-      src: "/images/industries/cruise-entertainment.png",
-    },
-    {
-      label: "800 × 500",
+      label: "",
       sublabel: "Tourist Destination",
       aspectRatio: "800/500",
-      src: "/images/industries/tourist-destination.png",
+      src: "/images/industries/TOURIST_DESTINATION.jpg",
+    },
+    {
+      label: "",
+      sublabel: "Tourist Destination",
+      aspectRatio: "800/500",
+      src: "/images/industries/TOURIST_DESTINATION_1.jpg",
     },
   ],
   products: {

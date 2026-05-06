@@ -29,7 +29,7 @@ export default function TechnicalPlaceholder({
 
   return (
     <div 
-      className={`${bgClass} ${!src ? 'border-[3px] border-[#0a0a0a] rounded-md' : ''} flex flex-col items-center justify-center gap-3 w-full relative overflow-hidden ${className}`}
+      className={`${bgClass} flex flex-col items-center justify-center gap-3 w-full relative overflow-hidden ${className}`}
       style={aspectRatio ? { aspectRatio } : {}}
     >
       {src ? (

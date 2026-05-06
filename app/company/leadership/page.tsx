@@ -4,7 +4,7 @@ import React from 'react'
 import ProductHero from '@/components/sections/product/ProductHero'
 import ProductCTA from '@/components/sections/product/ProductCTA'
 import ProductVisuals from '@/components/sections/product/ProductVisuals'
-import ProductProcessList from '@/components/sections/product/ProductProcessList'
+import TeamGrid from '@/components/sections/TeamGrid'
 
 const leadershipTeam = [
   {
@@ -79,10 +79,10 @@ export default function LeadershipPage() {
         description="The team building the future of digital entertainment."
       />
 
-      <ProductProcessList
+      <TeamGrid
         label="Leadership"
         title="The Team"
-        items={leadershipTeam}
+        members={leadershipTeam}
       />
 
       <section className="px-6 lg:px-12 pb-32 lg:pb-48">

@@ -42,16 +42,16 @@ export const enterpriseData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Secure Operations Center",
       aspectRatio: "800/500",
-      src: "/images/industries/secure-ops.png",
+      src: "/images/industries/SECURE_OPERATIONS_CENTER.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Government Data Center",
       aspectRatio: "800/500",
-      src: "/images/industries/government-data.png",
+      src: "/images/industries/GOVERNMENT_DATA_CENTER.jpg",
     },
   ],
   products: {

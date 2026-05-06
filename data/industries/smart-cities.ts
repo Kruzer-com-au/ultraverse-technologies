@@ -87,16 +87,16 @@ export const smartCitiesData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "City Skyline Digital Twin",
       aspectRatio: "800/500",
-      src: "/images/industries/smart-city-skyline.png",
+      src: "/images/industries/CITY_SKYLINE_DIGITAL_TWIN.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Urban Sensor Network",
       aspectRatio: "800/500",
-      src: "/images/industries/smart-city-sensor.png",
+      src: "/images/industries/URBAN_SENSOR_NETWORK.jpg",
     },
   ],
   cta: {

@@ -42,16 +42,16 @@ export const financialData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Trading Floor",
       aspectRatio: "800/500",
-      src: "/images/industries/financial-trading.png",
+      src: "/images/industries/TRADING_FLOOR.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Client Advisory Suite",
       aspectRatio: "800/500",
-      src: "/images/industries/financial-advisory.png",
+      src: "/images/industries/CLIENT_ADVISORY_SUITE.jpg",
     },
   ],
   products: {

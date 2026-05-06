@@ -41,11 +41,7 @@ export default function Home() {
       />
 
       <HomeCTA />
-
       <AboutSection />
-
-
-
 
       <ProductsSection products={products} />
 

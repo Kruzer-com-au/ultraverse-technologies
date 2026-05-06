@@ -6,11 +6,8 @@ import ProductHero from '@/components/sections/product/ProductHero'
 import ProductFeatureList from '@/components/sections/product/ProductFeatureList'
 import ProductCTA from '@/components/sections/product/ProductCTA'
 import ProductVisuals from '@/components/sections/product/ProductVisuals'
-import ProductProblemSection from '@/components/sections/product/ProductProblemSection'
-import ProductLinkList from '@/components/sections/product/ProductLinkList'
-import ProductProcessList from '@/components/sections/product/ProductProcessList'
+import TeamGrid from '@/components/sections/TeamGrid'
 import { leadershipTeam } from '@/data/leadership'
-import TechnicalPlaceholder from '@/components/ui/TechnicalPlaceholder'
 
 const threePillars = [
   {
@@ -37,13 +34,6 @@ const threePillars = [
     linkText: 'Explore',
     linkHref: '/solutions'
   }
-]
-
-const learnMore = [
-  { num: '01', title: 'Leadership', desc: 'Meet the team building ULTRAVERSE.', href: '/company/leadership' },
-  { num: '02', title: 'Careers', desc: 'Join us and help build the future.', href: '/company/careers' },
-  { num: '03', title: 'Press & Media', desc: 'News, announcements, and media resources.', href: '/company/press' },
-  { num: '04', title: 'Partners', desc: 'Technology and integration partnerships.', href: '/company/partners' }
 ]
 
 export default function CompanyPage() {
@@ -103,8 +93,6 @@ export default function CompanyPage() {
         bgClass="bg-background"
       />
 
-
-
       <section className="section-dark py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
         <div className="teal-orb absolute top-1/4 right-0 w-[600px] h-[600px] opacity-20 teal-glow" />
         <div className="max-w-[1400px] mx-auto relative z-10">
@@ -129,16 +117,12 @@ export default function CompanyPage() {
           </div>
         </div>
       </section>
-      <ProductProcessList
+
+      <TeamGrid
         label="Leadership"
         title="The Team"
-        items={leadershipTeam}
+        members={leadershipTeam}
       />
-      {/* <ProductLinkList 
-        title="Learn More"
-        description="Explore the people, opportunities, and partnerships behind ULTRAVERSE."
-        items={learnMore}
-      /> */}
 
       <ProductCTA
         title="Ready to Build With ULTRAVERSE?"

@@ -42,16 +42,16 @@ export const educationData: IndustryPageData = {
   ],
   visuals: [
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Virtual Classroom",
       aspectRatio: "800/500",
-      src: "/images/industries/virtual-classroom.png",
+      src: "/images/industries/VIRTUAL_CLASSROOM.jpg",
     },
     {
-      label: "800 × 500",
+      label: "",
       sublabel: "Campus Learning Hub",
       aspectRatio: "800/500",
-      src: "/images/industries/campus-hub.png",
+      src: "/images/industries/CAMPUS_LEARNING_HUB.jpg",
     },
   ],
   products: {

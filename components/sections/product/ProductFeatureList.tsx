@@ -48,11 +48,11 @@ export default function ProductFeatureList({
 }: ProductFeatureListProps) {
   const isDark = theme === 'dark'
   const isGrid = layout === 'grid'
-  
+
   return (
     <section className={`py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
       {isDark && <div className="teal-orb absolute top-1/4 right-0 w-[600px] h-[600px] opacity-20 teal-glow" />}
-      
+
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="max-w-4xl mb-20">
           <ScrollReveal>
@@ -83,9 +83,9 @@ export default function ProductFeatureList({
                     {item.num}
                   </span>
                   <div className="space-y-2">
-                    <h3 className={`editorial-heading text-lg ${isDark ? 'text-white' : 'text-text-primary'} uppercase leading-tight`}>
+                    <h4 className={`editorial-heading sub-head ${isDark ? 'text-white' : 'text-text-primary'} uppercase leading-tight`}>
                       {item.title}
-                    </h3>
+                    </h4>
                     <p className={`${isDark ? 'text-white/60' : 'text-text-secondary'} text-[13px] leading-relaxed`}>
                       {item.desc}
                     </p>
@@ -103,7 +103,7 @@ export default function ProductFeatureList({
                     <div className="col-span-2 lg:col-span-1">
                       <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{item.num}</span>
                     </div>
-                    
+
                     <div className="col-span-10 lg:col-span-4">
                       {item.sublabel && (
                         <p className="editorial-uppercase text-accent-teal text-[10px] tracking-[0.15em] mb-2">{item.sublabel}</p>
@@ -117,7 +117,7 @@ export default function ProductFeatureList({
                       <p className={`${isDark ? 'text-white/60' : 'text-text-secondary'} text-sm leading-relaxed ${item.bullets ? 'mb-6' : ''}`}>
                         {item.desc}
                       </p>
-                      
+
                       {item.bullets && (
                         <ul className="space-y-3">
                           {item.bullets.map((bullet, bIdx) => (
@@ -142,8 +142,8 @@ export default function ProductFeatureList({
 
                     {item.linkText && item.linkHref && (
                       <div className="col-span-12 lg:col-span-1 lg:col-start-12 flex lg:justify-end mt-4 lg:mt-0">
-                        <a 
-                          href={item.linkHref} 
+                        <a
+                          href={item.linkHref}
                           className={`text-sm font-medium inline-flex items-center gap-1 transition-all duration-700 hover:gap-2 ${isDark ? 'text-white hover:text-accent-teal' : 'text-text-primary hover:text-accent-teal'}`}
                         >
                           {item.linkText} <span aria-hidden="true">→</span>
@@ -163,7 +163,7 @@ export default function ProductFeatureList({
         )}
 
         {quote && (
-          <EditorialQuote 
+          <EditorialQuote
             text={quote.text}
             label={quote.label}
             sublabel={`ULTRAVERSE approach to ${label.toLowerCase()} technology`}

@@ -79,7 +79,11 @@ export default function UltraStreamPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Streaming Platform UI' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Streaming Platform UI', 
+          src: '/images/products/Streaming_Platform_UI.jpg' 
+        }}
       />
 
       <ProductFeatureList
@@ -92,8 +96,16 @@ export default function UltraStreamPage() {
 
       <ProductVisuals 
         grid={[
-          { label: '600 × 400', sublabel: 'Creator Dashboard' },
-          { label: '600 × 400', sublabel: 'Analytics Overview' }
+          { 
+            label: '', 
+            sublabel: 'Creator Dashboard', 
+            src: '/images/products/Creator_Dashboard.jpg' 
+          },
+          { 
+            label: '', 
+            sublabel: 'Analytics Overview', 
+            src: '/images/products/Analytics_Overview.jpg' 
+          }
         ]}
       />
 

@@ -35,20 +35,20 @@ export interface Industry {
 }
 
 export const heroFeatures: HeroFeature[] = [
-  { 
-    num: '01', 
-    text: 'The first cross-platform XR consumer data pipeline in existence: behavioural, spatial, and community intelligence you can\'t get anywhere else', 
-    align: 'left' 
+  {
+    num: '01',
+    text: 'The first cross-platform XR consumer data pipeline in existence: behavioural, spatial, and community intelligence you can\'t get anywhere else',
+    align: 'left'
   },
-  { 
-    num: '02', 
-    text: 'A blockchain-native identity and wallet layer: institutional-grade compliance across four regulatory regimes', 
-    align: 'left' 
+  {
+    num: '02',
+    text: 'A blockchain-native identity and wallet layer: institutional-grade compliance',
+    align: 'left'
   },
-  { 
-    num: '03', 
-    text: 'A live digital commerce infrastructure: real-time transactions, active consumers, measurable revenue', 
-    align: 'left' 
+  {
+    num: '03',
+    text: 'A live digital commerce infrastructure: real-time transactions, active consumers, measurable revenue',
+    align: 'left'
   },
 ]
 
