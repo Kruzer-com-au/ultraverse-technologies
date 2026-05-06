@@ -5,8 +5,8 @@ export const navItems: NavItem[] = [
     label: 'Products',
     href: '/products',
     subItems: [
-      { label: 'ULTRASTREAM', href: '/products/ultrastream', description: 'Streaming infrastructure' },
       { label: 'ULTRADATA', href: '/products/ultradata', description: 'City sensor data & digital twins' },
+      { label: 'ULTRASTREAM', href: '/products/ultrastream', description: 'Streaming infrastructure' },
       { label: 'ULTRAVERSE', href: '/products/ultraverse', description: 'Gaming & AR infrastructure' },
     ],
   },

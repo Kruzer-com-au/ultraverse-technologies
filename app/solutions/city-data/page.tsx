@@ -52,7 +52,11 @@ export default function CityDataPage() {
       </section>
 
       <ProductVisuals
-        primary={{ label: '1400 × 600', sublabel: 'Digital Twin City Dashboard' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Digital Twin City Dashboard', 
+          src: '/images/solutions/DIGITAL_TWIN_CITY_DASHBOARD.jpg' 
+        }}
       />
 
       <ProductFeatureList
@@ -64,7 +68,12 @@ export default function CityDataPage() {
       />
 
       <ProductVisuals
-        primary={{ label: '800 × 500', sublabel: 'Sensor Network Data Flow', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Sensor Network Data Flow', 
+          aspectRatio: '800/500',
+          src: '/images/solutions/SENSOR_NETWORK_DATA_FLOW.jpg' 
+        }}
         bgClass="bg-background"
       />
 

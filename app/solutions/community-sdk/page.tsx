@@ -31,7 +31,11 @@ export default function CommunitySDKPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Community SDK Integration Preview' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Community SDK Integration Preview', 
+          src: '/images/solutions/COMMUNITY_SDK_INTEGRATION_PREVIEW.jpg' 
+        }}
       />
 
       <ProductProcessList
@@ -41,7 +45,12 @@ export default function CommunitySDKPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '800 × 500', sublabel: 'Gamification & Engagement Dashboard', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Gamification & Engagement Dashboard', 
+          aspectRatio: '800/500',
+          src: '/images/solutions/GAMIFICATION_&_ENGAGEMENT_DASHBOARD.jpg' 
+        }}
         bgClass="bg-background"
       />
 

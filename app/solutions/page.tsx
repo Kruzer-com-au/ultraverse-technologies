@@ -2,58 +2,89 @@
 
 import React from 'react'
 import ProductHero from '@/components/sections/product/ProductHero'
-import SolutionListing from '@/components/sections/solution/SolutionListing'
+import SolutionsContent from '@/components/sections/solution/SolutionsContent'
+import ProductCTA from '@/components/sections/product/ProductCTA'
 
 const allSolutions = [
   {
-    title: 'White-Label Streaming',
-    category: 'Entertainment',
-    description: 'Custom-branded streaming platforms for organizations. Your brand, your audience, your data — powered by enterprise-grade infrastructure.',
+    title: 'White-Label Streaming Infrastructure',
+    category: 'Streaming',
     href: '/solutions/white-label-streaming'
   },
   {
-    title: 'Privacy & Compliance',
-    category: 'Infrastructure',
-    description: 'Zero-knowledge age verification and privacy-preserving identity. Prove what matters without exposing what doesn\'t.',
+    title: 'Privacy & Compliance Infrastructure',
+    category: 'Privacy',
     href: '/solutions/privacy-compliance'
   },
   {
-    title: 'Creator Economy',
-    category: 'Web3 & Payments',
-    description: 'Instant payments, engagement tools, and community governance for creator platforms. The infrastructure layer that powers the next generation of creator businesses.',
+    title: 'Creator Economy Platform',
+    category: 'Creators',
     href: '/solutions/creator-economy'
   },
   {
-    title: 'City Data & Digital Twins',
-    category: 'Smart Cities',
-    description: 'Real-time city data and spatial intelligence for digital twin models. Building the data foundation for the smart cities of the future.',
-    href: '/solutions/city-data'
-  },
-  {
-    title: 'Secure Communications',
-    category: 'Cybersecurity',
-    description: 'End-to-end encrypted messaging and collaboration tools for enterprise and government organizations.',
+    title: 'Enterprise Secure Communications',
+    category: 'Security',
     href: '/solutions/secure-communications'
   },
   {
-    title: 'Community SDK',
-    category: 'Software Development',
-    description: 'Plug-and-play social and gamification tools to build deeply engaged communities within your own platform.',
+    title: 'Community & Engagement SDK',
+    category: 'Community',
     href: '/solutions/community-sdk'
+  },
+  {
+    title: 'City Data & Digital Twin Feeds',
+    category: 'Data',
+    href: '/solutions/city-data'
+  }
+]
+
+const whyUltraverse = [
+  {
+    num: '01',
+    title: 'Privacy by Default',
+    desc: 'Zero-knowledge architecture means no honeypot databases, no unnecessary data collection, and full regulatory readiness across jurisdictions.'
+  },
+  {
+    num: '02',
+    title: 'API-First Design',
+    desc: 'Every solution exposes clean, well-documented APIs that integrate seamlessly with your existing technology stack and workflows.'
+  },
+  {
+    num: '03',
+    title: 'Global Infrastructure',
+    desc: 'Built on distributed infrastructure engineered for low-latency delivery, high availability, and compliance across regions.'
+  },
+  {
+    num: '04',
+    title: 'Modular Adoption',
+    desc: 'Each solution operates independently or as part of a unified platform, giving enterprises the flexibility to adopt what they need.'
   }
 ]
 
 export default function SolutionsPage() {
   return (
-    <main className="flex-1 bg-background">
-      <ProductHero 
-        label="Ecosystem"
+    <main className="flex-1">
+      <ProductHero
+        label="Solutions"
         title="Enterprise Solutions"
-        description="Tailored technical ecosystems designed to solve specific industry challenges with the Ultraverse stack. High-fidelity infrastructure for the next era of digital experiences."
-        hideCtas={true}
+        description="Purpose-built technology solving critical challenges across streaming, privacy, communications, and community."
+        ctaText="Contact Sales"
+        ctaHref="/contact"
+        secondaryCtaText="View Products"
+        secondaryCtaHref="/products"
       />
 
-      <SolutionListing solutions={allSolutions} />
+      <SolutionsContent 
+        solutions={allSolutions}
+        whyItems={whyUltraverse}
+      />
+
+      <ProductCTA 
+        title="Find the Right Solution"
+        description="Our team will help you identify the right combination of solutions for your specific requirements."
+        ctaText="Talk to an Expert"
+        ctaHref="/contact"
+      />
     </main>
   )
 }

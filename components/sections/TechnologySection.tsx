@@ -14,13 +14,9 @@ export default function TechnologySection({ pillars }: TechnologySectionProps) {
       <div className="relative z-10 max-w-[1400px] mx-auto">
         <ScrollReveal><SectionLabel>Our Technology</SectionLabel></ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-4 py-2">Built on Data-First</h2>
+          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-4 py-2">Built on Data-First <br /> Privacy-First Architecture </h2>
         </ScrollReveal>
-        <ScrollReveal delay={0.15}>
-          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-12 py-2">
-            Privacy-First Architecture
-          </h2>
-        </ScrollReveal>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-white/10">
           {pillars.map((t, i) => (

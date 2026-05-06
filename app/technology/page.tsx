@@ -76,10 +76,9 @@ const coreInfrastructure = [
   {
     num: '06',
     sublabel: 'Identity Layer',
-    title: 'Unified Identity & Wallet',
+    title: 'Wallet',
     desc: 'A single, portable identity that works across every ULTRAVERSE product. Users authenticate once and carry their reputation, preferences, and credentials seamlessly.',
     bullets: [
-      'Cross-product identity system with single sign-on',
       'Soulbound reputation tokens for persistent, non-transferable credentials',
       'Account abstraction for frictionless user onboarding',
       'Portable across all ULTRAVERSE products and partner integrations'
@@ -109,14 +108,18 @@ const zkpSteps = [
 export default function TechnologyPage() {
   return (
     <main className="flex-1 bg-background">
-      <ProductHero 
+      <ProductHero
         label="Technology"
         title="Our Technology"
         description="Purpose-built infrastructure designed for privacy, performance, and scale."
       />
 
-      <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Technology Infrastructure' }}
+      <ProductVisuals
+        primary={{
+          label: '1400 × 600',
+          sublabel: 'Technology Infrastructure',
+          src: '/images/TECHNOLOGYINFRASTRUCTURE.jpg'
+        }}
       />
 
       <ProductFeatureList
@@ -126,7 +129,7 @@ export default function TechnologyPage() {
         features={coreInfrastructure}
       />
 
-      <ProductInfoGrid 
+      <ProductInfoGrid
         label="Zero-Knowledge Proofs"
         title="How It Works"
         items={zkpSteps}
@@ -134,15 +137,16 @@ export default function TechnologyPage() {
         theme="dark"
       >
         <ScrollReveal delay={0.1}>
-          <TechnicalPlaceholder 
-            label="800 × 500" 
-            sublabel="ZKP Circuit Architecture" 
+          <TechnicalPlaceholder
+            label="800 × 500"
+            sublabel="ZKP Circuit Architecture"
             aspectRatio="800/500"
+            src="/images/SERVERROOM.jpg"
           />
         </ScrollReveal>
       </ProductInfoGrid>
 
-      <ProductCTA 
+      <ProductCTA
         title="Interested in Our Technology?"
         description="Our engineering team is available to discuss integration opportunities and technical partnerships."
         ctaText="Contact Engineering"

@@ -102,7 +102,11 @@ export default function WhiteLabelStreamingPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'White-Label Streaming Dashboard' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'White-Label Streaming Dashboard', 
+          src: '/images/solutions/mr_kruzer_white-label_streaming_dashboard_UI.jpg' 
+        }}
       />
 
       <ProductInfoGrid
@@ -113,7 +117,12 @@ export default function WhiteLabelStreamingPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '800 × 500', sublabel: 'Branded Player UI Preview', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Branded Player UI Preview', 
+          aspectRatio: '800/500',
+          src: '/images/solutions/Branded_Player_UI_Preview.jpg' 
+        }}
         bgClass="bg-background"
       />
 

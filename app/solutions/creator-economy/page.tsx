@@ -31,7 +31,11 @@ export default function CreatorEconomyPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Creator Dashboard UI' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Creator Dashboard UI', 
+          src: '/images/solutions/CREATOR_DASHBOARD.png' 
+        }}
       />
 
       <ProductInfoGrid
@@ -50,7 +54,12 @@ export default function CreatorEconomyPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '800 × 500', sublabel: 'Instant Payment Flow', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Instant Payment Flow', 
+          aspectRatio: '800/500',
+          src: '/images/solutions/INSTANT_PAYMENT_FLOW.jpg' 
+        }}
         bgClass="bg-background"
       />
 

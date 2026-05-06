@@ -31,7 +31,11 @@ export default function SecureCommunicationsPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'End-to-End Encryption Flow' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'End-to-End Encryption Flow', 
+          src: '/images/solutions/END-TO-END_ENCRYPTION_FLOW.jpg' 
+        }}
       />
 
       <ProductInfoGrid
@@ -44,7 +48,12 @@ export default function SecureCommunicationsPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '800 × 500', sublabel: 'Secure Messaging Interface', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Secure Messaging Interface', 
+          aspectRatio: '800/500',
+          src: '/images/solutions/SECURE_MESSAGING_INTERFACE.jpg' 
+        }}
         bgClass="bg-background"
       />
 

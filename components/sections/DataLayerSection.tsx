@@ -24,10 +24,10 @@ export default function DataLayerSection({ dataTypes, specs }: DataLayerSectionP
         {/* Section header */}
         <ScrollReveal><SectionLabel>The Data Layer</SectionLabel></ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-4 py-2">Plug &amp; Play Data</h2>
-        </ScrollReveal>
-        <ScrollReveal delay={0.15}>
-          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-12 py-2">for Twin Cities</h2>
+          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-12 py-2">
+            Plug &amp; Play Data <br />
+            for Twin Cities
+          </h2>
         </ScrollReveal>
 
         {/* Two-column intro */}
@@ -67,7 +67,7 @@ export default function DataLayerSection({ dataTypes, specs }: DataLayerSectionP
           <SectionLabel>Data Types We Deliver</SectionLabel>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-px bg-white/10 [&_h3]:text-lg">
           {dataTypes.map((d, i) => (
             <ScrollReveal key={d.num} delay={i * 0.05}>
               <DarkCard num={d.num} title={d.title} desc={d.desc} size="sm" />

@@ -29,7 +29,7 @@ export default function ProductProcessList({
   return (
     <section className="section-dark py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
       <div className="teal-orb absolute -top-40 -right-40 w-[600px] h-[600px] opacity-20 teal-glow" />
-      
+
       <div className="max-w-[1400px] mx-auto relative z-10">
         <ScrollReveal>
           <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6">{label}</p>
@@ -48,7 +48,7 @@ export default function ProductProcessList({
                       {item.num}
                     </span>
                   </div>
-                  
+
                   <div className="lg:col-span-5">
                     <h3 className="editorial-heading text-xl lg:text-2xl text-white tracking-normal">
                       {item.title}
@@ -69,7 +69,7 @@ export default function ProductProcessList({
               </div>
             </ScrollReveal>
           ))}
-          <div className="border-t border-white/10" />
+          {/* <div className="border-t border-white/10" /> */}
         </div>
 
         {result && (
