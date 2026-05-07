@@ -23,6 +23,17 @@ export default function Header() {
     setMobileExpanded(null)
   }, [pathname])
 
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [mobileOpen])
+
   // Order: PRODUCTS, SOLUTIONS, INDUSTRIES, TECHNOLOGY, COMPANY
   const orderedNavItems = [
     navItems.find(item => item.label === 'Products'),
@@ -39,11 +50,11 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[var(--glass-bg)] backdrop-blur-xl' : 'bg-[var(--background)]'
         } border-b border-[var(--border)]`}
     >
-      <div className="max-w-[1400px] mx-auto px-8 lg:px-16">
+      <div className="max-w-[1400px] mx-auto px-6 lg:px-8 xl:px-16">
         <div className="flex items-center justify-between h-[72px]">
 
           {/* ── Logo ── */}
-          <Link href="/" className="glitch-logo flex items-center gap-3 shrink-0 group">
+          <Link href="/" className="glitch-logo flex items-center gap-2 lg:gap-1 xl:gap-3 shrink-0 group">
             <Image
               src="/images/logo.png"
               alt="Ultraverse"
@@ -51,13 +62,13 @@ export default function Header() {
               height={28}
               className="object-contain"
             />
-            <div className="flex items-center gap-2">
+            <div className="flex items-center lg:gap-1 xl:gap-2">
               <span
                 className="glitch-text font-bold text-lg tracking-[0.08em] uppercase text-text-primary"
                 data-text="ULTRAVERSE TECHNOLOGIES"
               >
                 ULTRAVERSE{" "}
-                <span className="hidden sm:inline text-xs font-semibold tracking-[0.12em] opacity-60">
+                <span className="hidden xl:inline text-xs font-semibold tracking-[0.12em] opacity-60">
                   TECHNOLOGIES
                 </span>
               </span>
@@ -65,7 +76,7 @@ export default function Header() {
           </Link>
 
           {/* ── Desktop Navigation ── */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden lg:flex items-center lg:gap-0 xl:gap-1" aria-label="Main navigation">
             {orderedNavItems.map((item) => {
               const hasDropdown = dropdownLabels.includes(item.label)
               const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
@@ -90,7 +101,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={`
-                      flex items-center gap-1 px-4 py-2
+                      flex items-center gap-1 px-2.5 lg:px-3 xl:px-4 py-2
                       text-[12px] font-semibold uppercase tracking-[0.1em]
                       transition-colors duration-200
                       ${isActive ? 'text-black' : 'text-black/55 hover:text-[var(--accent-teal-deep)]'}
@@ -157,7 +168,7 @@ export default function Header() {
           </nav>
 
           {/* ── CTA + Mobile toggle ── */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 lg:gap-1 xl:gap-3">
             <Link
               href="/contact"
               className="
@@ -197,7 +208,7 @@ export default function Header() {
 
       {/* ── Mobile Menu ── */}
       <div
-        className={`lg:hidden fixed inset-0 top-[72px] bg-[#E5E3DB] z-40 overflow-y-auto transition-transform duration-400 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`lg:hidden fixed inset-0 top-[72px] w-full h-[calc(100vh-72px)] bg-[#E5E3DB] z-[100] overflow-y-auto transition-transform duration-400 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'
           } border-t border-black/8`}
       >
         <div className="p-8">

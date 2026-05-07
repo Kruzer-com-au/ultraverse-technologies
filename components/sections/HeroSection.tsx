@@ -22,7 +22,7 @@ export default function HeroSection({
   year = '2026',
 }: HeroSectionProps) {
   return (
-    <section className="relative min-h-[100svh] flex flex-col pt-28 overflow-hidden">
+    <section className="relative min-h-[60svh] md:min-h-[100svh] flex flex-col pt-16 md:pt-28 overflow-hidden">
       {/* Ambient teal glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full pointer-events-none teal-glow"
@@ -31,21 +31,21 @@ export default function HeroSection({
 
       <HeroWrapper>
         {/* Headlines — pinned to bottom */}
-        <div className="relative max-w-[1400px] mx-auto w-full flex-1 flex items-end pb-10 lg:pb-14 px-6 lg:px-12">
+        <div className="relative max-w-[1400px] mx-auto w-full flex-1 flex items-end pb-6 md:pb-10 lg:pb-14 px-6 lg:px-12">
           <div className="w-full">
             {/* Eyebrow */}
-            <p className="hero-animate-label editorial-uppercase text-[var(--accent-teal)] text-[10px] md:text-xs font-bold tracking-[0.25em] mb-6 lg:mb-8">
+            <p className="hero-animate-label editorial-uppercase text-[var(--accent-teal)] text-[10px] md:text-xs font-bold tracking-[0.25em] mb-4 md:mb-6 lg:mb-8">
               {tagline}
             </p>
 
             {/* Main Headlines - Single H1, no spans, natural wrapping */}
-            <h1 className="hero-animate-h1-1 editorial-display text-[clamp(2.2rem,7vw,8rem)] text-white leading-[0.95] mb-12 lg:mb-20 uppercase">
+            <h1 className="hero-animate-h1-1 editorial-display text-[clamp(1.8rem,7vw,8rem)] text-white leading-[0.95] mb-6 md:mb-12 lg:mb-20 uppercase">
               {lines.join(' ')} {accentLine ? accentLine : ''}
             </h1>
 
             {/* Description - ordinary p tag */}
             {description && (
-              <p className="hero-animate-body editorial-body text-[var(--text-secondary)] text-lg md:text-xl lg:text-2xl max-w-4xl mb-12 lg:mb-16 leading-relaxed">
+              <p className="hero-animate-body editorial-body text-[var(--text-secondary)] text-lg md:text-xl lg:text-2xl max-w-4xl mb-6 md:mb-12 lg:mb-16 leading-relaxed">
                 {description}
               </p>
             )}

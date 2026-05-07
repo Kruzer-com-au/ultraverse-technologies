@@ -31,7 +31,7 @@ export default function SolutionsContent({ solutions, whyItems }: SolutionsConte
           <div className="max-w-4xl mb-20">
             <ScrollReveal>
               <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6">What We Solve</p>
-              <h2 className="editorial-heading text-[clamp(2rem,5vw,5rem)] text-text-primary mb-6">Technology Built for Scale</h2>
+              <h2 className="editorial-heading text-[clamp(1.5rem,5vw,5rem)] text-text-primary mb-6">Technology Built for Scale</h2>
               <p className="editorial-body text-text-secondary text-sm md:text-base max-w-2xl">
                 Each solution is designed to operate independently or as part of a unified platform,
                 giving enterprises the flexibility to adopt what they need.
@@ -50,7 +50,7 @@ export default function SolutionsContent({ solutions, whyItems }: SolutionsConte
                     <span className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.15em] block mb-2">
                       {solution.category}
                     </span>
-                    <h3 className="editorial-heading text-[clamp(1.2rem,3vw,3rem)] text-text-primary group-hover:text-accent-teal-deep transition-colors duration-700">
+                    <h3 className="editorial-heading text-[clamp(1.2rem,3vw,3rem)] text-text-primary group-hover:text-accent-teal-deep transition-colors duration-700 leading-tight">
                       {solution.title}
                     </h3>
                   </div>
@@ -92,7 +92,7 @@ export default function SolutionsContent({ solutions, whyItems }: SolutionsConte
         <div className="relative z-10 max-w-[1400px] mx-auto">
           <ScrollReveal>
             <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6">Why ULTRAVERSE</p>
-            <h2 className="editorial-heading text-[clamp(2rem,5vw,5rem)] text-white mb-20">Engineered for Enterprise</h2>
+            <h2 className="editorial-heading text-[clamp(1.5rem,5vw,5rem)] text-white mb-20">Engineered for Enterprise</h2>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10">

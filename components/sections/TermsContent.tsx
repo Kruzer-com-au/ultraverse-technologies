@@ -10,7 +10,7 @@ interface TermsBlockProps {
 
 const TermsBlock = ({ title, content }: TermsBlockProps) => (
   <ScrollReveal>
-    <div className="py-12 border-t border-black/10">
+    <div className="py-8 lg:py-12 border-t border-black/10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4">
           <h3 className="editorial-uppercase text-text-primary text-xs font-bold tracking-[0.2em]">{title}</h3>
@@ -37,7 +37,7 @@ const TermsBlock = ({ title, content }: TermsBlockProps) => (
 
 export default function TermsContent({ sections }: { sections: TermsBlockProps[] }) {
   return (
-    <section className="py-32 lg:py-48 px-6 lg:px-12 bg-background">
+    <section className="py-16 md:py-32 lg:py-48 px-6 lg:px-12 bg-background">
       <div className="max-w-[1400px] mx-auto">
         <div className="border-b border-black/10 mb-8" />
         {sections.map((section, idx) => (

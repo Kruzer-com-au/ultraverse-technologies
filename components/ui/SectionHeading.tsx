@@ -25,7 +25,7 @@ export function SectionHeading({ children, color = 'primary', className = '' }: 
     teal: 'text-[var(--accent-teal)]',
   }
   return (
-    <h2 className={`editorial-heading text-[clamp(1.8rem,4vw,4rem)] ${colorMap[color]} mb-12 py-2 ${className}`}>
+    <h2 className={`editorial-heading text-[clamp(1.5rem,4vw,4rem)] ${colorMap[color]} mb-12 py-2 ${className}`}>
       {children}
     </h2>
   )

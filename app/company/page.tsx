@@ -93,7 +93,7 @@ export default function CompanyPage() {
         bgClass="bg-background"
       />
 
-      <section className="section-dark py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
+      <section className="section-dark py-16 md:py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
         <div className="teal-orb absolute top-1/4 right-0 w-[600px] h-[600px] opacity-20 teal-glow" />
         <div className="max-w-[1400px] mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">

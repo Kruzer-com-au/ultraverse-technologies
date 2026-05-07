@@ -11,9 +11,9 @@ interface FeatureGridProps {
 
 export default function FeatureGrid({ title, items, isDark }: FeatureGridProps) {
   return (
-    <div className="mt-24">
+    <div className="mt-16 lg:mt-24">
       <ScrollReveal>
-        <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-8">{title}</p>
+        <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6 lg:mb-8">{title}</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
           {items.map((item) => (
             <div key={item.title}>

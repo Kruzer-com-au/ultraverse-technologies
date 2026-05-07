@@ -23,7 +23,7 @@ export default function ProductVisuals({
   bgClass = 'bg-[#ebeae4]'
 }: ProductVisualsProps) {
   return (
-    <section className={`py-16 lg:py-24 px-6 lg:px-12 ${bgClass}`}>
+    <section className={`py-12 md:py-16 lg:py-24 px-6 lg:px-12 ${bgClass}`}>
       <div className="max-w-[1400px] mx-auto">
         {primary && (
           <ScrollReveal>

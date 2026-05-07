@@ -24,7 +24,7 @@ export default function DataLayerSection({ dataTypes, specs }: DataLayerSectionP
         {/* Section header */}
         <ScrollReveal><SectionLabel>The Data Layer</SectionLabel></ScrollReveal>
         <ScrollReveal delay={0.1}>
-          <h2 className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-12 py-2">
+          <h2 className="editorial-heading text-[clamp(1.5rem,4vw,4rem)] text-white mb-12 py-2">
             Plug &amp; Play Data <br />
             for Twin Cities
           </h2>

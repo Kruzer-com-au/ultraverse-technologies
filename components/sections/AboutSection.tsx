@@ -22,7 +22,7 @@ export default function AboutSection() {
                 {/* Heading Brackets */}
                 <span className="absolute -top-4 -left-4 w-10 h-10 border-t border-l border-black/40 pointer-events-none" />
                 <h2
-                  className="editorial-heading text-[clamp(1.8rem,4vw,4rem)] text-white mb-12 py-2"
+                  className="editorial-heading text-[clamp(1.5rem,4vw,4rem)] text-white mb-12 py-2"
                   data-text="We build real-time data infrastructure for digital twin cities, privacy-first streaming, and immersive technology that redefines how cities and enterprises operate."
                 >
                   We build real-time data infrastructure for digital twin cities, privacy-first

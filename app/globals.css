@@ -465,6 +465,8 @@ h3 {
   font-weight: 600;
   transition: all 0.3s;
   display: inline-flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-primary:hover {
@@ -484,6 +486,8 @@ h3 {
   font-weight: 600;
   transition: all 0.3s;
   display: inline-flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-teal:hover {
@@ -504,6 +508,8 @@ h3 {
   text-decoration: none;
   transition: all 0.4s;
   display: inline-flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-outline-dark:hover {
@@ -522,6 +528,9 @@ h3 {
   padding: 14px 32px;
   font-size: 13px;
   font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
   transition: all 0.3s;
 }
 
