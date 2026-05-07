@@ -22,13 +22,13 @@ export default function HomeCTA() {
 
           <div className="relative z-10">
             <ScrollReveal>
-              <p className="editorial-uppercase text-accent-teal text-[10px] md:text-xs font-bold tracking-[0.25em] mb-12">READY TO GET STARTED?</p>
-              <h2 className="editorial-heading text-white mb-20 max-w-5xl leading-[1.1] uppercase">
+              <p className="editorial-uppercase text-accent-teal text-[10px] md:text-xs font-bold tracking-[0.25em] mb-8 lg:mb-12">READY TO GET STARTED?</p>
+              <h2 className="editorial-heading text-white mb-12 lg:mb-20 max-w-5xl leading-[1.1] uppercase">
                 Your competitors are already looking at this. Are you?
               </h2>
             </ScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-24 text-left">
               {links.map((link, idx) => (
                 <ScrollReveal key={link.text} delay={idx * 0.1}>
                   <Link

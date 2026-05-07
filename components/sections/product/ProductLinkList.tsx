@@ -25,7 +25,7 @@ export default function ProductLinkList({
   items
 }: ProductLinkListProps) {
   return (
-    <section className="py-32 lg:py-48 px-6 lg:px-12 bg-background border-t border-black/5">
+    <section className="py-16 md:py-24 lg:py-48 px-6 lg:px-12 bg-background border-t border-black/5">
       <div className="max-w-[1400px] mx-auto">
         {(label || title || description) && (
           <div className="max-w-4xl mb-20">
@@ -36,7 +36,7 @@ export default function ProductLinkList({
             )}
             {title && (
               <ScrollReveal delay={0.1}>
-                <h2 className="editorial-heading text-[clamp(2rem,5vw,5rem)] text-text-primary mb-6 uppercase">
+                <h2 className="editorial-heading text-[clamp(1.5rem,5vw,5rem)] text-text-primary mb-6 uppercase">
                   {title}
                 </h2>
               </ScrollReveal>
@@ -56,12 +56,12 @@ export default function ProductLinkList({
             <ScrollReveal key={item.num} delay={idx * 0.08}>
               <Link href={item.href} className="group block">
                 <div className="border-t border-black/10 py-8 lg:py-10 transition-all duration-700 hover:bg-black/[0.02] px-2 -mx-2">
-                  <div className="grid grid-cols-12 gap-4 items-center">
-                    <div className="col-span-2 lg:col-span-1">
-                      <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{item.num}</span>
+                  <div className="flex flex-col lg:grid lg:grid-cols-12 gap-2 lg:gap-8 items-start lg:items-center">
+                    <div className="w-full lg:col-span-1">
+                      <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums block lg:inline mb-1 lg:mb-0">{item.num}</span>
                     </div>
-                    <div className="col-span-7 lg:col-span-4">
-                      <h3 className="editorial-heading text-[clamp(1.2rem,2.5vw,2rem)] text-text-primary group-hover:text-accent-teal transition-colors duration-700 uppercase">
+                    <div className="w-full lg:col-span-4">
+                      <h3 className="editorial-heading text-[clamp(1.2rem,2.5vw,2rem)] text-text-primary group-hover:text-accent-teal transition-colors duration-700 uppercase leading-tight">
                         {item.title}
                       </h3>
                     </div>
@@ -70,7 +70,7 @@ export default function ProductLinkList({
                         {item.desc}
                       </p>
                     </div>
-                    <div className="col-span-3 lg:col-span-1 lg:col-start-12 flex justify-end">
+                    <div className="hidden lg:flex lg:col-span-1 lg:col-start-12 justify-end">
                       <span className="text-text-primary text-lg transition-transform duration-700 group-hover:translate-x-2" aria-hidden="true">→</span>
                     </div>
                   </div>

@@ -12,9 +12,9 @@ interface EditorialQuoteProps {
 
 export default function EditorialQuote({ text, label, sublabel, isDark }: EditorialQuoteProps) {
   return (
-    <div className="mt-24">
+    <div className="mt-16 lg:mt-24">
       <ScrollReveal>
-        <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-8">{label}</p>
+        <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6 lg:mb-8">{label}</p>
         <p className={`editorial-heading text-[clamp(1.2rem,2.5vw,2.5rem)] leading-relaxed max-w-3xl ${isDark ? 'text-white' : 'text-text-primary'}`}>
           &ldquo;{text}&rdquo;
         </p>

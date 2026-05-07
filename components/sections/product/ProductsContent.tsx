@@ -32,23 +32,26 @@ export default function ProductsContent({ products }: ProductsContentProps) {
                   href={product.href}
                   className="group block border-t border-black/10 py-8 lg:py-10 glitch-border transition-all duration-700"
                 >
-                  <div className="grid grid-cols-12 gap-4 items-start">
-                    <div className="col-span-2 lg:col-span-1">
+                  <div className="flex flex-col lg:grid lg:grid-cols-12 gap-6 lg:gap-4 items-start">
+                    <div className="hidden lg:block lg:col-span-1">
                       <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{product.num}</span>
                     </div>
-                    <div className="col-span-10 lg:col-span-3">
-                      <h3 className="editorial-heading text-[clamp(1.2rem,2.5vw,2.5rem)] text-text-primary group-hover:text-accent-teal-deep transition-colors duration-700 uppercase">
-                        {product.name}
-                      </h3>
+                    <div className="w-full lg:col-span-3">
+                      <div className="flex items-center gap-4 mb-2 lg:mb-0">
+                        <span className="lg:hidden editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{product.num}</span>
+                        <h3 className="editorial-heading text-[clamp(1.2rem,2.5vw,2.5rem)] text-text-primary group-hover:text-accent-teal-deep transition-colors duration-700 uppercase">
+                          {product.name}
+                        </h3>
+                      </div>
                     </div>
-                    <div className="col-span-12 lg:col-span-5 lg:col-start-5">
+                    <div className="w-full lg:col-span-5 lg:col-start-5">
                       <p className="editorial-body text-text-secondary text-sm leading-relaxed">
                         {product.desc}
                       </p>
                     </div>
-                    <div className="col-span-12 lg:col-span-3 lg:col-start-10 flex flex-wrap gap-2">
+                    <div className="w-full lg:col-span-3 lg:col-start-10 flex flex-wrap gap-2 pt-2 lg:pt-0">
                       {product.tags.map(tag => (
-                        <span key={tag} className="editorial-uppercase text-[10px] tracking-[0.15em] text-text-muted border border-black/10 px-3 py-1 bg-white/5 rounded-sm">
+                        <span key={tag} className="editorial-uppercase text-[10px] tracking-[0.15em] text-text-muted border border-black/10 px-3 py-1 bg-white/5 rounded-sm whitespace-normal text-center">
                           {tag}
                         </span>
                       ))}
@@ -86,28 +89,28 @@ export default function ProductsContent({ products }: ProductsContentProps) {
       <section className="py-16 lg:py-24 px-6 lg:px-12 bg-background">
         <div className="max-w-[1400px] mx-auto">
           <ScrollReveal>
-            <TechnicalPlaceholder 
-              label="1400 × 600" 
-              sublabel="Product Ecosystem Overview" 
-              aspectRatio="1400/600" 
+            <TechnicalPlaceholder
+              label="1400 × 600"
+              sublabel="Product Ecosystem Overview"
+              aspectRatio="1400/600"
               src="/images/PRODUCTECOSYSTEMOVERVIEW.jpg"
             />
           </ScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
             <ScrollReveal delay={0.1}>
-              <TechnicalPlaceholder 
-                label="600 × 400" 
-                sublabel="Platform Architecture" 
-                aspectRatio="600/400" 
+              <TechnicalPlaceholder
+                label="600 × 400"
+                sublabel="Platform Architecture"
+                aspectRatio="600/400"
                 src="/images/PLATFORMARCHITECTURE.jpg"
               />
             </ScrollReveal>
             <ScrollReveal delay={0.2}>
-              <TechnicalPlaceholder 
-                label="600 × 400" 
-                sublabel="Technology Stack" 
-                aspectRatio="600/400" 
+              <TechnicalPlaceholder
+                label="600 × 400"
+                sublabel="Technology Stack"
+                aspectRatio="600/400"
                 src="/images/TECHNOLOGYSTACK.jpg"
               />
             </ScrollReveal>

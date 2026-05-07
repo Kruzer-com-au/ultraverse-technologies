@@ -50,14 +50,14 @@ export default function ProductFeatureList({
   const isGrid = layout === 'grid'
 
   return (
-    <section className={`py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
+    <section className={`py-16 md:py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
       {isDark && <div className="teal-orb absolute top-1/4 right-0 w-[600px] h-[600px] opacity-20 teal-glow" />}
 
       <div className="max-w-[1400px] mx-auto relative z-10">
         <div className="max-w-4xl mb-20">
           <ScrollReveal>
-            <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-6">{label}</p>
-            <h2 className={`editorial-heading text-[clamp(2rem,5vw,5rem)] ${isDark ? 'text-white' : 'text-text-primary'} mb-6 uppercase`}>
+            <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-4 lg:mb-6">{label}</p>
+            <h2 className={`editorial-heading text-[clamp(1.5rem,5vw,5rem)] ${isDark ? 'text-white' : 'text-text-primary'} mb-6 uppercase`}>
               {title}
             </h2>
             {description && (
@@ -99,16 +99,16 @@ export default function ProductFeatureList({
             {features.map((item, idx) => (
               <ScrollReveal key={item.num} delay={idx * 0.05}>
                 <div className={`border-t ${isDark ? 'border-white/10' : 'border-black/10'} py-8 lg:py-10`}>
-                  <div className="grid grid-cols-12 gap-4 lg:gap-8 items-start">
-                    <div className="col-span-2 lg:col-span-1">
-                      <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums">{item.num}</span>
+                  <div className="flex flex-col lg:grid lg:grid-cols-12 gap-2 lg:gap-8 items-start">
+                    <div className="w-full lg:col-span-1">
+                      <span className="editorial-uppercase text-accent-teal text-sm font-bold tabular-nums block lg:inline mb-1 lg:mb-0">{item.num}</span>
                     </div>
 
-                    <div className="col-span-10 lg:col-span-4">
+                    <div className="w-full lg:col-span-4">
                       {item.sublabel && (
                         <p className="editorial-uppercase text-accent-teal text-[10px] tracking-[0.15em] mb-2">{item.sublabel}</p>
                       )}
-                      <h3 className={`editorial-heading text-xl lg:text-2xl ${isDark ? 'text-white' : 'text-text-primary'} uppercase`}>
+                      <h3 className={`editorial-heading text-xl lg:text-2xl ${isDark ? 'text-white' : 'text-text-primary'} uppercase leading-tight`}>
                         {item.title}
                       </h3>
                     </div>
