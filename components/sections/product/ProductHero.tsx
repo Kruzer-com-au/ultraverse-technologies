@@ -2,6 +2,7 @@
 
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import ScrollReveal from '@/components/ScrollReveal'
 
 interface ProductHeroProps {
@@ -29,6 +30,7 @@ export default function ProductHero({
   hideCtas = false,
   children
 }: ProductHeroProps) {
+  const router = useRouter()
   return (
     <section className="relative min-h-[35vh] md:min-h-[70vh] flex flex-col justify-end pt-16 md:pt-32 pb-6 md:pb-16 lg:pb-24 px-6 lg:px-12 overflow-hidden bg-background">
       {/* Background Glow */}
@@ -55,7 +57,29 @@ export default function ProductHero({
           <ScrollReveal delay={0.3}>
             <div className="flex flex-col sm:flex-row flex-wrap gap-4 mb-8 md:mb-16">
               <Link href={ctaHref} className="btn-teal w-full sm:w-auto justify-center">{ctaText}</Link>
-              <Link href={secondaryCtaHref} className="btn-outline w-full sm:w-auto justify-center">{secondaryCtaText}</Link>
+              <button
+                onClick={() => {
+                  if (
+                    secondaryCtaHref === '/products' || 
+                    secondaryCtaHref === '/solutions' ||
+                    secondaryCtaHref === '/industries'
+                  ) {
+                    // On products/solutions/industries landing pages, scroll to the next section
+                    const hero = document.querySelector('section');
+                    if (hero) {
+                      window.scrollTo({
+                        top: hero.offsetHeight,
+                        behavior: 'smooth'
+                      });
+                    }
+                  } else {
+                    router.push(secondaryCtaHref);
+                  }
+                }}
+                className="btn-outline w-full sm:w-auto justify-center"
+              >
+                {secondaryCtaText}
+              </button>
             </div>
           </ScrollReveal>
         )}

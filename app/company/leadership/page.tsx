@@ -5,6 +5,7 @@ import ProductHero from '@/components/sections/product/ProductHero'
 import ProductCTA from '@/components/sections/product/ProductCTA'
 import ProductVisuals from '@/components/sections/product/ProductVisuals'
 import TeamGrid from '@/components/sections/TeamGrid'
+import TechnicalPlaceholder from '@/components/ui/TechnicalPlaceholder'
 
 const leadershipTeam = [
   {
@@ -85,16 +86,18 @@ export default function LeadershipPage() {
         members={leadershipTeam}
       />
 
-      <section className="px-6 lg:px-12 pb-32 lg:pb-48">
+      <section className="px-6 lg:px-12 py-12 lg:py-20">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <ProductVisuals
-              primary={{ label: '600 × 400', sublabel: 'Leadership Team', aspectRatio: '600/400' }}
-              bgClass="bg-background"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <TechnicalPlaceholder
+              label="600 × 400"
+              sublabel="Leadership Team"
+              aspectRatio="600/400"
             />
-            <ProductVisuals
-              primary={{ label: '600 × 400', sublabel: 'Board Room', aspectRatio: '600/400' }}
-              bgClass="bg-background"
+            <TechnicalPlaceholder
+              label="600 × 400"
+              sublabel="Board Room"
+              aspectRatio="600/400"
             />
           </div>
         </div>

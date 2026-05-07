@@ -70,8 +70,8 @@ export default function SolutionsPage() {
         description="Purpose-built technology solving critical challenges across streaming, privacy, communications, and community."
         ctaText="Contact Sales"
         ctaHref="/contact"
-        secondaryCtaText="View Products"
-        secondaryCtaHref="/products"
+        secondaryCtaText="View All Solutions"
+        secondaryCtaHref="/solutions"
       />
 
       <SolutionsContent 

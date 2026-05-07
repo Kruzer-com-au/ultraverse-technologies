@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 interface HeroVideoProps {
   /** Primary local source — place your file at /public/video/home-hero.mp4 */
@@ -18,53 +18,39 @@ export default function HeroVideo({
   fallbackSrc = DEFAULT_FALLBACK,
 }: HeroVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null)
+  const togglePlay = () => {
+    const video = videoRef.current
+    if (!video) return
+    
+    if (video.paused) {
+      video.play()
+    } else {
+      video.pause()
+    }
+  }
 
-  // Guarantee autoplay — browsers sometimes block the `autoPlay` HTML attribute
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
-
-    video.muted = true          // must be muted for browser autoplay policies
+    video.muted = false
     video.playsInline = true
-
-    const tryPlay = () => {
-      video.play().catch(() => {
-        // Some browsers need a user-interaction first;
-        // attach a one-time click listener as last resort
-        const resume = () => { video.play(); document.removeEventListener('click', resume) }
-        document.addEventListener('click', resume, { once: true })
-      })
-    }
-
-    if (video.readyState >= 2) {
-      tryPlay()
-    } else {
-      video.addEventListener('canplay', tryPlay, { once: true })
-    }
-
-    // Re-play if the tab becomes visible again (e.g. user switches tabs)
-    const handleVisibility = () => {
-      if (document.visibilityState === 'visible') video.play().catch(() => {})
-    }
-    document.addEventListener('visibilitychange', handleVisibility)
-
-    return () => document.removeEventListener('visibilitychange', handleVisibility)
   }, [])
 
   return (
-    <div className="relative w-full overflow-hidden h-[28vh] md:h-[32vh] lg:h-[35vh]">
+    <div 
+      className="relative w-full overflow-hidden h-[28vh] md:h-[32vh] lg:h-[35vh] cursor-pointer group"
+      onClick={togglePlay}
+    >
       <video
         ref={videoRef}
-        autoPlay
-        muted
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"
         style={{ zIndex: 1 }}
       >
-        {/* Local file (highest priority — add /public/video/home-hero.mp4) */}
+        {/* Local file (highest priority) */}
         <source src={localSrc} type="video/mp4" />
-        {/* CDN fallback so the section is never empty */}
+        {/* CDN fallback */}
         <source src={fallbackSrc} type="video/mp4" />
       </video>
 

@@ -7,7 +7,7 @@ import TechnicalPlaceholder from '@/components/ui/TechnicalPlaceholder'
 
 export interface IndustryItem {
   title: string
-  href: string
+  href?: string
   desc: string
 }
 
@@ -33,31 +33,49 @@ export default function IndustriesContent({ industries }: IndustriesContentProps
           </div>
 
           <div className="space-y-0">
-            {industries.map((industry, idx) => (
-              <ScrollReveal key={industry.title} delay={idx * 0.06}>
-                <Link
-                  href={industry.href}
-                  className="group flex items-center justify-between border-t border-black/10 py-6 lg:py-8 glitch-border transition-all duration-700"
+            {industries.map((industry, idx) => {
+              const content = (
+                <div className="flex-1">
+                  <h3 className="editorial-heading text-[clamp(1.2rem,3.5vw,3.5rem)] text-text-primary group-hover:text-accent-teal-deep transition-colors duration-700 leading-tight">
+                    {industry.title}
+                  </h3>
+                  <p className="text-text-secondary text-sm mt-2 max-w-xl">
+                    {industry.desc}
+                  </p>
+                </div>
+              );
+
+              const arrow = industry.href && (
+                <svg
+                  className="w-6 h-6 lg:w-8 lg:h-8 text-text-muted group-hover:text-accent-teal transition-all duration-700 group-hover:translate-x-2 shrink-0 ml-4"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <div className="flex-1">
-                    <h3 className="editorial-heading text-[clamp(1.2rem,3.5vw,3.5rem)] text-text-primary group-hover:text-accent-teal-deep transition-colors duration-700 leading-tight">
-                      {industry.title}
-                    </h3>
-                    <p className="text-text-secondary text-sm mt-2 max-w-xl">
-                      {industry.desc}
-                    </p>
-                  </div>
-                  <svg
-                    className="w-6 h-6 lg:w-8 lg:h-8 text-text-muted group-hover:text-accent-teal transition-all duration-700 group-hover:translate-x-2 shrink-0 ml-4"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </ScrollReveal>
-            ))}
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 5l7 7-7 7" />
+                </svg>
+              );
+
+              return (
+                <ScrollReveal key={industry.title} delay={idx * 0.06}>
+                  {industry.href ? (
+                    <Link
+                      href={industry.href}
+                      className="group flex items-center justify-between border-t border-black/10 py-6 lg:py-8 glitch-border transition-all duration-700"
+                    >
+                      {content}
+                      {arrow}
+                    </Link>
+                  ) : (
+                    <div
+                      className="group flex items-center justify-between border-t border-black/10 py-6 lg:py-8"
+                    >
+                      {content}
+                    </div>
+                  )}
+                </ScrollReveal>
+              );
+            })}
             <div className="border-t border-black/10" />
           </div>
         </div>

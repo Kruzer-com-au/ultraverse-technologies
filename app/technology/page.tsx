@@ -107,7 +107,7 @@ const zkpSteps = [
 
 export default function TechnologyPage() {
   return (
-    <main className="flex-1 bg-background">
+    <main className="flex-1 bg-background relative">
       <ProductHero
         label="Technology"
         title="Our Technology"

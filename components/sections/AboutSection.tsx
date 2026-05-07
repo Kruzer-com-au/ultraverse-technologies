@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ScrollReveal from '@/components/ScrollReveal'
 import { SectionLabel } from '@/components/ui/SectionHeading'
+import GeodesicBackground from '@/components/visuals/GeodesicBackground'
 
 export default function AboutSection() {
   return (
@@ -60,15 +61,14 @@ export default function AboutSection() {
             </ScrollReveal>
           </div>
 
-          {/* Right: Geodesic Sphere */}
+          {/* Right: 3D Geodesic Sphere */}
           <div className="lg:col-span-4 flex items-center justify-center self-stretch">
             <ScrollReveal className="relative w-full h-full flex items-center justify-center" delay={0.2}>
-              <div className="relative w-[300px] h-[300px] md:w-[450px] md:h-[450px]">
-                <Image
-                  src="/images/dd.png"
-                  alt="Ultraverse Visual"
-                  fill
-                  className="object-contain opacity-80"
+              <div className="relative w-[300px] h-[300px]">
+                <GeodesicBackground 
+                  className="absolute inset-0" 
+                  opacity={0.8} 
+                  interactive={true} 
                 />
               </div>
             </ScrollReveal>

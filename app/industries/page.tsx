@@ -36,12 +36,10 @@ const industriesData = [
   },
   {
     title: 'Government',
-    href: '/industries/government',
     desc: 'Secure digital infrastructure for public sector services, internal operations, and citizen-facing platforms.'
   },
   {
     title: 'CPG & Retail',
-    href: '/industries/retail',
     desc: 'Connected commerce experiences for consumer brands, retail activation, and audience engagement at scale.'
   },
   {
@@ -65,8 +63,8 @@ export default function IndustriesPage() {
         description="Purpose-built solutions for organizations that demand privacy, performance, and scale."
         ctaText="Contact Sales"
         ctaHref="/contact"
-        secondaryCtaText="View Solutions"
-        secondaryCtaHref="/solutions"
+        secondaryCtaText="View All Industries"
+        secondaryCtaHref="/industries"
       />
 
       <IndustriesContent industries={industriesData} />

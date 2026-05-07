@@ -10,7 +10,7 @@ export default function HomeCTA() {
   const links = [
     { text: 'License our data', href: '/products/ultradata' },
     { text: 'Partner with us', href: '/company/partners' },
-    { text: 'Build on Ultraverse', href: '/developers' }
+    { text: 'Build on Ultraverse', href: '/technology' }
   ]
 
   return (

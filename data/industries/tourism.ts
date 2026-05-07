@@ -233,7 +233,7 @@ export const tourismData: IndustryPageData = {
         num: "01",
         title: "White-Label Streaming",
         desc: "Fully branded deployment with your identity, your content, and your guest data. No third-party branding visible to end users.",
-        href: "/solutions",
+        href: "/solutions/white-label-streaming",
       },
     ],
   },
