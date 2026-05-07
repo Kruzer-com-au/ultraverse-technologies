@@ -76,7 +76,7 @@ const enterpriseApplications = [
 export default function UltraVersePage() {
   return (
     <main className="flex-1 bg-background">
-      <ProductHero 
+      <ProductHero
         label="ULTRAVERSE"
         title="One Ecosystem. Four Experiences."
         description="The Ultraverse is ULTRAVERSE's gaming and spatial experience platform; a unified ecosystem where location-based gaming, digital companions, historical exploration, and spatial computing share one architecture, one economy, and one player identity. Built for players, creators, and enterprise partners."
@@ -91,15 +91,30 @@ export default function UltraVersePage() {
         features={capabilities}
       />
 
-      <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Gaming & Spatial Architecture' }}
+      <ProductVisuals
+        primary={{
+          label: '',
+          sublabel: '',
+          src: '/images/GAMING_&_SPATIAL_ARCHITECTURE.png',
+          aspectRatio: '1400/600'
+        }}
         grid={[
-          { label: '600 × 400', sublabel: 'Squad Legacy Interface' },
-          { label: '600 × 400', sublabel: 'Quantum Creature Profile' }
+          {
+            label: '',
+            sublabel: '',
+            src: '/images/SQUAD_LEGACY_INTERFACE.png',
+            aspectRatio: '600/400'
+          },
+          {
+            label: '',
+            sublabel: '',
+            src: '/images/QUANTUM_CREATURE_PROFILE.png',
+            aspectRatio: '600/400'
+          }
         ]}
       />
 
-      <ProductInfoGrid 
+      <ProductInfoGrid
         label="The Ecosystem"
         title="Shared Foundation"
         items={ecosystemPillars}
@@ -114,7 +129,7 @@ export default function UltraVersePage() {
         theme="dark"
       />
 
-      <ProductCTA 
+      <ProductCTA
         title="Interested in Ultraverse?"
         description="Explore IP licensing, co-development partnerships, and enterprise activation opportunities."
         ctaText="Get in Touch"
