@@ -1,3 +1,6 @@
+'use client'
+
+import React from 'react'
 import HeroWrapper from '@/components/HeroWrapper'
 import HeroVideo from '@/components/ui/HeroVideo'
 import type { HeroFeature } from '@/lib/home-data'
@@ -21,8 +24,19 @@ export default function HeroSection({
   company = 'Kruzer Ultraverse Pty Ltd',
   year = '2026',
 }: HeroSectionProps) {
+  const sectionRef = React.useRef<HTMLElement>(null)
+
+  const handleScroll = () => {
+    if (sectionRef.current) {
+      const height = sectionRef.current.offsetHeight
+      window.scrollTo({ top: height, behavior: 'smooth' })
+    } else {
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+    }
+  }
+
   return (
-    <section className="relative min-h-[60svh] md:min-h-[100svh] flex flex-col pt-16 md:pt-28 overflow-hidden">
+    <section ref={sectionRef} className="relative min-h-[60svh] md:min-h-[100svh] flex flex-col pt-16 md:pt-28 overflow-hidden">
       {/* Ambient teal glow */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full pointer-events-none teal-glow"
@@ -78,7 +92,12 @@ export default function HeroSection({
           <div className="border-t-2 border-black/15 pt-6">
             <div className="flex items-center justify-between">
               <span className="editorial-uppercase text-[var(--text-secondary)] text-xs font-semibold tracking-[0.15em]">{company}</span>
-              <span className="editorial-uppercase text-[var(--text-secondary)] text-xs font-semibold tracking-[0.15em] hidden md:block">Scroll to explore</span>
+              <button 
+                onClick={handleScroll}
+                className="editorial-uppercase text-[var(--text-secondary)] text-xs font-semibold tracking-[0.15em] hidden md:block hover:text-[var(--accent-teal)] transition-colors cursor-pointer"
+              >
+                Scroll to explore
+              </button>
               <span className="editorial-uppercase text-[var(--text-secondary)] text-xs font-semibold tracking-[0.15em]">{year}</span>
             </div>
           </div>

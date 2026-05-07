@@ -37,9 +37,9 @@ export default function ScrollReveal({
     return () => observer.disconnect()
   }, [delay])
 
-  return (
-    <Tag ref={ref as any} className={className}>
-      {children}
-    </Tag>
+  return React.createElement(
+    Tag,
+    { ref: ref as any, className },
+    children
   )
 }
