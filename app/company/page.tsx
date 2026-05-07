@@ -68,8 +68,8 @@ export default function CompanyPage() {
       </ProductHero>
 
       <ProductVisuals
-        primary={{ 
-          label: '1400 × 600', 
+        primary={{
+          label: '1400 × 600',
           sublabel: 'ULTRAVERSE Headquarters',
           src: '/images/ULTRAVERSEHEADQUARTERS.png'
         }}
@@ -84,9 +84,9 @@ export default function CompanyPage() {
       />
 
       <ProductVisuals
-        grid={[{ 
-          label: '800 × 500', 
-          sublabel: 'Team Photo', 
+        grid={[{
+          label: '800 × 500',
+          sublabel: 'Team Photo',
           aspectRatio: '800/500',
           src: '/images/TEAMPHOTO.jpg'
         }]}

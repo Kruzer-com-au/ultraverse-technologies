@@ -23,13 +23,12 @@ export default function TechnicalPlaceholder({
   src
 }: TechnicalPlaceholderProps) {
   const bgClass = dark ? 'bg-[#3a3a3a]' : 'bg-[#d4d4d4]'
-  const borderClass = 'border-[3px] border-[#0a0a0a]'
   const textPrimary = 'text-white/90'
   const textMuted = 'text-white/50'
 
   return (
     <div 
-      className={`${bgClass} flex flex-col items-center justify-center gap-3 w-full relative overflow-hidden ${className}`}
+      className={`w-full relative overflow-hidden ${!src ? bgClass : ''} ${className}`}
       style={aspectRatio ? { aspectRatio } : {}}
     >
       {src ? (
@@ -37,17 +36,18 @@ export default function TechnicalPlaceholder({
           src={src} 
           alt={sublabel || label} 
           fill 
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          className="object-cover"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       ) : (
-        <div className="relative z-10 flex flex-col items-center gap-3">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
           <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#888" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-60">
             <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
             <circle cx="8.5" cy="8.5" r="1.5" />
             <polyline points="21 15 16 10 5 21" />
           </svg>
           
-          <div className="flex flex-col items-center gap-1">
+          <div className="flex flex-col items-center gap-1 text-center px-4">
             <span className={`${textPrimary} text-lg md:text-xl font-mono tracking-wider uppercase font-bold`}>
               {width && height ? `${width} × ${height}` : label}
             </span>
