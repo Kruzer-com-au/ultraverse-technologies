@@ -90,7 +90,7 @@ export default function WhiteLabelStreamingPage() {
         description="Custom-branded streaming platforms for organizations. Your brand, your audience, your data — powered by enterprise-grade infrastructure."
         ctaText="Request a Demo"
         ctaHref="/contact"
-        secondaryCtaText="View All Solutions"
+        secondaryCtaText="Explore Solutions"
         secondaryCtaHref="/solutions"
       />
 

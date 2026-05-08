@@ -7,7 +7,7 @@ export const gamingData: IndustryPageData = {
     description: "From tournament broadcasts to creator communities, deliver the performance and scale that gaming audiences demand. Ultra-low latency, real-time interaction, and seamless in-game integration.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "View All Industries",
+    secondaryCtaText: "Explore Industries",
     secondaryCtaHref: "/industries",
   },
   sections: [

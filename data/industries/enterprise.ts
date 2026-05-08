@@ -7,7 +7,7 @@ export const enterpriseData: IndustryPageData = {
     description: "Compliance-ready infrastructure for organizations where data sovereignty, regulatory adherence, and communications security are non-negotiable.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "View All Industries",
+    secondaryCtaText: "Explore Industries",
     secondaryCtaHref: "/industries",
   },
   sections: [

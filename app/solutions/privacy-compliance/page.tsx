@@ -112,7 +112,7 @@ export default function PrivacyCompliancePage() {
         description="Zero-knowledge age verification and privacy-preserving identity. Prove what matters without exposing what doesn't."
         ctaText="Schedule a Briefing"
         ctaHref="/contact"
-        secondaryCtaText="View All Solutions"
+        secondaryCtaText="Explore Solutions"
         secondaryCtaHref="/solutions"
       />
 

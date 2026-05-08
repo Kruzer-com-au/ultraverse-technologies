@@ -69,6 +69,8 @@ export default function QuantumCreaturesPage() {
         label="Quantum Creatures"
         title="Persistent Digital Companions"
         description="Creatures that grow, evolve, and battle across sessions. Quantum Creatures combines collection mechanics, competitive battling, and persistent progression into a franchise-ready digital companion platform."
+        secondaryCtaText="Explore Products"
+        secondaryCtaHref="/products"
       />
 
       <ProductVisuals

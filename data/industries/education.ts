@@ -7,7 +7,7 @@ export const educationData: IndustryPageData = {
     description: "Secure, interactive platforms for virtual classrooms, lecture streaming, student communities, and credentialing. Built for institutions that take student privacy seriously.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "View All Industries",
+    secondaryCtaText: "Explore Industries",
     secondaryCtaHref: "/industries",
   },
   sections: [

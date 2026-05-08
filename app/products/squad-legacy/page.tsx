@@ -64,6 +64,8 @@ export default function SquadLegacyPage() {
         label="Squad Legacy"
         title="Where Gaming Meets the Real World"
         description="AR-integrated squad-based combat with territory control. Build your squad, claim your territory, and compete in a persistent world that blends digital gameplay with real-world geography."
+        secondaryCtaText="Explore Products"
+        secondaryCtaHref="/products"
       />
 
       <ProductVisuals

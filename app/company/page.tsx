@@ -6,7 +6,7 @@ import ProductHero from '@/components/sections/product/ProductHero'
 import ProductFeatureList from '@/components/sections/product/ProductFeatureList'
 import ProductCTA from '@/components/sections/product/ProductCTA'
 import ProductVisuals from '@/components/sections/product/ProductVisuals'
-import TeamGrid from '@/components/sections/TeamGrid'
+import LeadershipTeam from '@/components/sections/LeadershipTeam'
 import { leadershipTeam } from '@/data/leadership'
 
 const threePillars = [
@@ -118,7 +118,7 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      <TeamGrid
+      <LeadershipTeam
         label="Leadership"
         title="The Team"
         members={leadershipTeam}

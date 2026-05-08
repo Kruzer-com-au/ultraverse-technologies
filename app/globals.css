@@ -724,11 +724,11 @@ h3 {
 
 /* ─── Section Specific Typography (Ref Parity) ─── */
 .section-dark p {
-  font-size: 1.25rem !important;
-  /* 20px */
-  line-height: 1.75rem !important;
-  max-width: 42rem !important;
   color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.text-full-width {
+  max-width: none !important;
 }
 
 @media (max-width: 768px) {

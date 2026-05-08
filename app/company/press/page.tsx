@@ -17,6 +17,7 @@ export default function PressPage() {
         label={hero.label}
         title={hero.title}
         description={hero.description}
+        hideCtas
       />
 
       <ProductFeatureList
