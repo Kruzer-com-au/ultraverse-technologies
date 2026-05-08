@@ -17,6 +17,7 @@ export default function CareersPage() {
         label={hero.label}
         title={hero.title}
         description={hero.description}
+        hideCtas
       />
 
       <ProductFeatureList

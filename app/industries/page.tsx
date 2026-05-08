@@ -63,7 +63,7 @@ export default function IndustriesPage() {
         description="Purpose-built solutions for organizations that demand privacy, performance, and scale."
         ctaText="Contact Sales"
         ctaHref="/contact"
-        secondaryCtaText="View All Industries"
+        secondaryCtaText="Explore Industries"
         secondaryCtaHref="/industries"
       />
 

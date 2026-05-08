@@ -9,51 +9,51 @@ import ProductInfoGrid from '@/components/sections/product/ProductInfoGrid'
 import ProductVisuals from '@/components/sections/product/ProductVisuals'
 
 const dataTypes = [
-  { 
-    num: '01', 
-    title: 'Pedestrian Flow', 
+  {
+    num: '01',
+    title: 'Pedestrian Flow',
     desc: 'Real-time foot traffic density, movement patterns, crowd dynamics, and dwell-time analytics across city zones. Understand how people move through urban environments at street level.',
     tags: ['Density heatmaps', 'Flow direction vectors', 'Dwell-time analysis', 'Zone-level aggregation']
   },
-  { 
-    num: '02', 
-    title: 'Environmental', 
+  {
+    num: '02',
+    title: 'Environmental',
     desc: 'Hyper-local air quality, noise levels, temperature, humidity, and atmospheric pressure readings. Street-level environmental intelligence that satellite data cannot provide.',
     tags: ['AQI readings', 'Noise mapping', 'Microclimate data', 'Pollution source tracking']
   },
-  { 
-    num: '03', 
-    title: 'Infrastructure Status', 
+  {
+    num: '03',
+    title: 'Infrastructure Status',
     desc: 'Road surface conditions, public transport load factors, utility grid status, water pressure, and availability metrics across city infrastructure networks.',
     tags: ['Road condition index', 'Transit load factors', 'Grid availability', 'Maintenance alerts']
   },
-  { 
-    num: '04', 
-    title: 'Commercial Activity', 
+  {
+    num: '04',
+    title: 'Commercial Activity',
     desc: 'Retail density patterns, venue occupancy indicators, economic activity signals, and district-level commercial vitality metrics for urban economic modelling.',
     tags: ['Occupancy patterns', 'Footfall conversion', 'District vitality index', 'Temporal patterns']
   },
-  { 
-    num: '05', 
-    title: 'Traffic & Mobility', 
+  {
+    num: '05',
+    title: 'Traffic & Mobility',
     desc: 'Vehicle flow rates, parking utilization, cycling patterns, and multimodal transport data. Complete mobility intelligence from road to rail to micro-mobility.',
     tags: ['Vehicle flow rates', 'Parking utilization', 'Cycle lane usage', 'Multimodal splits']
   },
-  { 
-    num: '06', 
-    title: 'Safety & Incidents', 
+  {
+    num: '06',
+    title: 'Safety & Incidents',
     desc: 'Anonymized incident reporting patterns, emergency response metrics, and public safety indicators. Privacy-preserving safety intelligence for urban resilience planning.',
     tags: ['Incident density', 'Response patterns', 'Risk scoring', 'Anonymized reporting']
   },
-  { 
-    num: '07', 
-    title: 'Energy & Utilities', 
+  {
+    num: '07',
+    title: 'Energy & Utilities',
     desc: 'Grid load distribution, renewable energy output, water consumption patterns, and smart meter aggregations for infrastructure capacity planning and sustainability modelling.',
     tags: ['Grid load curves', 'Renewable output', 'Consumption patterns', 'Peak forecasting']
   },
-  { 
-    num: '08', 
-    title: 'Urban Development', 
+  {
+    num: '08',
+    title: 'Urban Development',
     desc: 'Construction activity tracking, zoning change monitoring, permit density analysis, and development velocity indicators for growth modelling and investment intelligence.',
     tags: ['Construction tracking', 'Permit density', 'Zoning changes', 'Development velocity']
   }
@@ -75,16 +75,17 @@ const integrationSteps = [
 export default function UltraDataPage() {
   return (
     <main className="flex-1 bg-background">
-      <ProductHero 
+      <ProductHero
         label="ULTRADATA"
         title="Real-Time City Data for Digital Twin Models"
         description="Active sensor networks across launch cities. Ultra-lean packet sets. Plug & play feeds for twin city platforms. Ground-truth data that city-scale models can actually process."
         ctaText="Request Data Access"
-        secondaryCtaText="View Solutions"
-        secondaryCtaHref="/solutions/city-data"
+        ctaHref="contact"
+        secondaryCtaText="Explore Products"
+        secondaryCtaHref="/products"
       />
 
-      <ProductProblemSection 
+      <ProductProblemSection
         label="The Problem"
         title="Digital twin city platforms are starving for processable, real-time data. Most city data is too noisy, too heavy, or arrives too late to be useful at scale."
         col1Text="Twin city modelling requires continuous data streams that are current, lightweight, and standardized. Satellite imagery is delayed. IoT dumps are too raw. Government datasets are quarterly at best."
@@ -99,27 +100,27 @@ export default function UltraDataPage() {
         theme="dark"
       />
 
-      <ProductVisuals 
-        primary={{ 
-          label: '', 
-          sublabel: 'Sensor Network Dashboard', 
-          src: '/images/products/Sensor_Network_Dashboard.jpg' 
+      <ProductVisuals
+        primary={{
+          label: '',
+          sublabel: 'Sensor Network Dashboard',
+          src: '/images/products/Sensor_Network_Dashboard.jpg'
         }}
         grid={[
-          { 
-            label: '', 
-            sublabel: 'City Data Heatmap', 
-            src: '/images/products/City_Data_Heatmap.jpg' 
+          {
+            label: '',
+            sublabel: 'City Data Heatmap',
+            src: '/images/products/City_Data_Heatmap.jpg'
           },
-          { 
-            label: '', 
-            sublabel: 'Digital Twin Model', 
-            src: '/images/products/Digital_Twin_Model.jpg' 
+          {
+            label: '',
+            sublabel: 'Digital Twin Model',
+            src: '/images/products/Digital_Twin_Model.jpg'
           }
         ]}
       />
 
-      <ProductInfoGrid 
+      <ProductInfoGrid
         label="Why ULTRADATA"
         title="Built for Twin City Scale"
         items={whyItems}
@@ -133,7 +134,7 @@ export default function UltraDataPage() {
         theme="dark"
       />
 
-      <ProductCTA 
+      <ProductCTA
         title="Ready for Real-Time City Data?"
         description="Talk to our data team about sensor coverage, data types, and integration with your digital twin platform."
         ctaText="Request Data Access"

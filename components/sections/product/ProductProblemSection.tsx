@@ -19,7 +19,7 @@ export default function ProductProblemSection({
   return (
     <section className="py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden bg-background">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-8">
             <ScrollReveal>
               <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-8">{label}</p>
@@ -28,7 +28,7 @@ export default function ProductProblemSection({
               </h2>
             </ScrollReveal>
           </div>
-          <div className="lg:col-span-4 flex flex-col justify-end">
+          <div className="lg:col-span-4 flex flex-col">
             <ScrollReveal delay={0.1}>
               <p className="text-text-secondary text-sm leading-relaxed mb-6">
                 {col1Text}

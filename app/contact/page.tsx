@@ -30,26 +30,26 @@ export default function ContactPage() {
 
   return (
     <main className="flex-1 bg-background">
-      <ProductHero 
+      {/* <ProductHero
         label="Contact"
         title="Get in Touch"
         description="Let's discuss how ULTRAVERSE can power your next initiative."
         hideCtas={true}
       />
 
-      <ProductVisuals 
-        primary={{ 
-          label: '1400 × 600', 
+      <ProductVisuals
+        primary={{
+          label: '1400 × 600',
           sublabel: 'Office Location',
           src: '/images/OFFICELOCATION.png'
         }}
         bgClass="bg-background"
-      />
+      /> */}
 
       <section className="py-32 lg:py-48 px-6 lg:px-12">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            
+
             {/* Form Section */}
             <div className="lg:col-span-7">
               <ScrollReveal>
@@ -201,9 +201,9 @@ export default function ContactPage() {
 
               <ScrollReveal delay={0.6}>
                 <div className="mt-10">
-                  <TechnicalPlaceholder 
-                    label="600 × 400" 
-                    sublabel="Contact Team" 
+                  <TechnicalPlaceholder
+                    label="600 × 400"
+                    sublabel="Contact Team"
                     aspectRatio="600/400"
                     src="/images/CONTACTTEAM.jpg"
                   />

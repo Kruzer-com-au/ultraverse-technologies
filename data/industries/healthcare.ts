@@ -7,7 +7,7 @@ export const healthcareData: IndustryPageData = {
     description: "Secure, reliable video and communications infrastructure purpose-built for healthcare organizations. From telehealth to medical education, patient privacy is never compromised.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "View All Industries",
+    secondaryCtaText: "Explore Industries",
     secondaryCtaHref: "/industries",
   },
   sections: [

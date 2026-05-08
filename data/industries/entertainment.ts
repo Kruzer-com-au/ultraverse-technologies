@@ -7,7 +7,7 @@ export const entertainmentData: IndustryPageData = {
     description: "Stream live events at scale, build direct artist-fan relationships, and create immersive experiences that redefine what entertainment can be.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "View All Industries",
+    secondaryCtaText: "Explore Industries",
     secondaryCtaHref: "/industries",
   },
   sections: [

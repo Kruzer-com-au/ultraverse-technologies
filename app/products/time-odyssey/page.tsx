@@ -79,6 +79,8 @@ export default function TimeOdysseyPage() {
         label="Time Odyssey"
         title="Travel Through Time. Explore the World."
         description="Tourism-focused experiences that blend real-world locations with historical narratives. Time Odyssey transforms how travelers engage with destinations through immersive, interactive storytelling tied to the places they visit."
+        secondaryCtaText="Explore Products"
+        secondaryCtaHref="/products"
       />
 
       <ProductVisuals

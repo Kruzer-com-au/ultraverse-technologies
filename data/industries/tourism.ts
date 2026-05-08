@@ -7,7 +7,7 @@ export const tourismData: IndustryPageData = {
     description: "White-label Time Odyssey deployments for cruise lines, resorts, destination marketing organizations, and cultural heritage sites. Custom-branded experiences that explore historical narratives and cultural landmarks in real time.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "View All Industries",
+    secondaryCtaText: "Explore Industries",
     secondaryCtaHref: "/industries",
   },
   sections: [

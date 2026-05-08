@@ -32,7 +32,7 @@ export default function HeroVideo({
   useEffect(() => {
     const video = videoRef.current
     if (!video) return
-    video.muted = false
+    video.muted = true
     video.playsInline = true
   }, [])
 
@@ -43,6 +43,8 @@ export default function HeroVideo({
     >
       <video
         ref={videoRef}
+        autoPlay
+        muted
         loop
         playsInline
         className="absolute inset-0 w-full h-full object-cover"

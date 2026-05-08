@@ -4,7 +4,7 @@ export const communitySDKData = {
     title: "Community & Engagement SDK",
     description: "Embeddable social features and gamification tools that integrate into any application. Build community without building infrastructure.",
     cta: { text: "Explore the SDK", href: "/contact" },
-    secondaryCta: { text: "View All Solutions", href: "/solutions" }
+    secondaryCta: { text: "Explore Solutions", href: "/solutions" }
   },
   capabilities: {
     label: "Capabilities",

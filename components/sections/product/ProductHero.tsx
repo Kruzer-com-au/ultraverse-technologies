@@ -48,7 +48,7 @@ export default function ProductHero({
         </ScrollReveal>
 
         <ScrollReveal delay={0.2}>
-          <p className="editorial-body text-text-secondary text-base md:text-lg max-w-2xl mb-6 md:mb-10">
+          <p className={`editorial-body text-text-secondary text-base md:text-lg max-w-2xl leading-relaxed ${hideCtas ? 'mb-16 md:mb-32 lg:mb-40' : 'mb-6 md:mb-10'}`}>
             {description}
           </p>
         </ScrollReveal>
