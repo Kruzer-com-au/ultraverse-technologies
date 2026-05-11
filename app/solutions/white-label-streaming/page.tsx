@@ -90,11 +90,12 @@ export default function WhiteLabelStreamingPage() {
         description="Custom-branded streaming platforms for organizations. Your brand, your audience, your data — powered by enterprise-grade infrastructure."
         ctaText="Request a Demo"
         ctaHref="/contact"
-        secondaryCtaText="Explore Solutions"
-        secondaryCtaHref="/solutions"
+        secondaryCtaText="Explore More"
+        secondaryCtaHref="#features"
       />
 
       <ProductFeatureList
+        id="features"
         label="Capabilities"
         title="Everything You Need to Launch"
         description="A complete streaming platform stack — from ingest to playback, analytics to monetization — ready to deploy under your brand."

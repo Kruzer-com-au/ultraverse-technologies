@@ -112,11 +112,12 @@ export default function PrivacyCompliancePage() {
         description="Zero-knowledge age verification and privacy-preserving identity. Prove what matters without exposing what doesn't."
         ctaText="Schedule a Briefing"
         ctaHref="/contact"
-        secondaryCtaText="Explore Solutions"
-        secondaryCtaHref="/solutions"
+        secondaryCtaText="Explore More"
+        secondaryCtaHref="#features"
       />
 
       <ProductFeatureList
+        id="features"
         label="Capabilities"
         title="Privacy That Scales"
         description="Enterprise-grade verification infrastructure that satisfies regulators while respecting user privacy."

@@ -38,6 +38,7 @@ export default function EnterprisePage() {
       {sections?.map((section) => (
         <ProductFeatureList 
           key={section.id}
+          id={section.id}
           label={section.label}
           title={section.title}
           description={section.description || ''}

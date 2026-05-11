@@ -32,11 +32,13 @@ export default function LeadershipPage() {
               label="600 × 400"
               sublabel="Leadership Team"
               aspectRatio="600/400"
+              src="/images/TEAMPHOTO.jpg"
             />
             <TechnicalPlaceholder
               label="600 × 400"
               sublabel="Board Room"
               aspectRatio="600/400"
+              src="/images/ULTRAVERSEHEADQUARTERS.png"
             />
           </div>
         </div>

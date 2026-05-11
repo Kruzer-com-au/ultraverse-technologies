@@ -24,6 +24,7 @@ export default function CommunitySDKPage() {
       />
 
       <ProductFeatureList
+        id="features"
         label={capabilities.label}
         title={capabilities.title}
         description={capabilities.description}

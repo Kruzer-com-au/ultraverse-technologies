@@ -4,7 +4,7 @@ export const creatorEconomyData = {
     title: "Creator Economy Platform",
     description: "Instant payments, engagement tools, and community governance for creator platforms. The infrastructure layer that powers the next generation of creator businesses.",
     cta: { text: "Get Started", href: "/contact" },
-    secondaryCta: { text: "Explore Solutions", href: "/solutions" }
+    secondaryCta: { text: "Explore More", href: "#features" }
   },
   capabilities: {
     label: "Capabilities",

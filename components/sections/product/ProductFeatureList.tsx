@@ -33,6 +33,7 @@ interface ProductFeatureListProps {
     text: string
     label: string
   }
+  id?: string
 }
 
 export default function ProductFeatureList({
@@ -44,13 +45,14 @@ export default function ProductFeatureList({
   layout = 'list',
   children,
   subGrid,
-  quote
+  quote,
+  id
 }: ProductFeatureListProps) {
   const isDark = theme === 'dark'
   const isGrid = layout === 'grid'
 
   return (
-    <section className={`py-16 md:py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
+    <section id={id} className={`py-16 md:py-24 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
       {isDark && <div className="teal-orb absolute top-1/4 right-0 w-[600px] h-[600px] opacity-20 teal-glow" />}
 
       <div className="max-w-[1400px] mx-auto relative z-10">

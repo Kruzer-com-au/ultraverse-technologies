@@ -31,42 +31,42 @@ export const leadershipTeam = [
     num: '05',
     title: 'Shari Thompson',
     sublabel: 'Head of Strategic Operations',
-    photo: '',
+    photo: '/images/SHARI_THOMPSON.jpeg',
     desc: "With over two decades of leadership across technology, finance, health, and creative sectors, she brings a rare combination of brand strategy and operational discipline — with a track record that includes securing over £14 million in new contracts through brand repositioning and more than £1 million in international growth through global marketing strategy. At Kruzer, she is responsible for operational alignment, cross-team accountability, launch execution, and risk management across the ecosystem."
   },
   {
     num: '06',
     title: 'Jules Pedersen',
     sublabel: 'Non-Executive Director',
-    photo: '',
+    photo: '/images/JULES_PEDERSEN.png',
     desc: "Over 25 years in Telecommunications, Media, Entertainment, and Technology, he has built a global network spanning the Americas and Asia Pacific — applied through his role as Executive Chairman and major shareholder of Newport Capital Group, where he delivers high-growth investment returns through complex go-to-market structures and M&A. An active philanthropist supporting causes including the Royal Children's Hospital and the Daniel Morcombe Foundation, Jules brings board-level strategic and commercial expertise to Kruzer."
   },
   {
     num: '07',
     title: 'Leon Gardiner',
     sublabel: 'Non-Executive Director',
-    photo: '',
+    photo: '/images/LEON_GARDINER.png',
     desc: "With over 30 years of leadership across property, infrastructure, and construction, he is a trusted advisor to boards, government bodies, and private organisations on corporate governance, enterprise risk, audit, and compliance. His career includes serving as an independent government reviewer on projects exceeding AUD $2 billion, leading property compliance audits exceeding AUD $3 billion, and overseeing commercial portfolios valued at over AUD $1.5 billion. He is also the Founder Director of the Men's Mental Health Foundation, combining deep commercial expertise with a genuine commitment to social impact. At Kruzer, he brings the independent judgment and governance rigour that a company at this stage of growth requires."
   },
   {
     num: '08',
     title: 'Uday Senapati',
     sublabel: 'Non-Executive Director',
-    photo: '',
+    photo: '/images/UDAY_SENAPATI.png',
     desc: "Based in London, he is a globally experienced technology and strategy executive currently serving as Vice President and Partner in Automotive, Battery & Mobility at Siemens Advanta. His career spans Bentley Motors, Group Lotus, and General Motors, building a reputation for bridging deep engineering expertise with commercial outcomes across large-scale transformation programmes. He holds an Executive MBA from the University of Manchester alongside advanced engineering degrees from the University of Southampton. At Kruzer, he brings independent strategic oversight and forward-looking insight across digital transformation, emerging technologies, and global market expansion."
   },
   {
     num: '09',
     title: 'Tabber Benedict',
     sublabel: 'Non-Executive Director',
-    photo: '',
+    photo: '/images/TABBER_BENEDICT.png',
     desc: "A Columbia Law School graduate and founder of Benedict Advisors PLLC in New York, he brings over 25 years of expertise in mergers and acquisitions, private equity, and complex corporate transactions — with aggregate deal experience exceeding $100 billion. He trained at White & Case and Schulte Roth & Zabel, and has held senior roles across the White House, the Federal Reserve Bank of New York, and ACE Limited (now Chubb). At Kruzer, he provides independent oversight and strategic guidance across corporate structuring, capital strategy, and international transactions."
   },
   {
     num: '10',
     title: 'Tim Sims AM FAICD',
     sublabel: 'Mentor and Advisor',
-    photo: '',
+    photo: '/images/TIM_SIMS_AM FAICD.png',
     desc: "A Founding Partner of Pacific Equity Partners, one of Australia's leading private equity firms, he brings decades of experience across private equity, management consulting, and organisational transformation. Prior to PEP, he served as Managing Partner for Australasia and Africa at Bain & Company and was a founding figure in L.E.K. Consulting's Asia-Pacific operations. A Kennedy Scholar, he holds degrees from the University of Oxford and a Master of Public Administration from Harvard University. Appointed a Member of the Order of Australia in 2019 for his contributions to community and philanthropy, and a Foundation Fellow of the Australian Institute of Company Directors, Tim brings to Kruzer the kind of strategic depth and governance experience that comes from building and scaling businesses at the highest level."
   }
 ]

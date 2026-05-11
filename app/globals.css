@@ -52,6 +52,10 @@ body {
 }
 
 /* ─── Base Overrides ─── */
+button, a {
+  cursor: pointer;
+}
+
 ::selection {
   color: #000;
   background: rgba(86, 191, 163, 0.25);
@@ -467,6 +471,7 @@ h3 {
   display: inline-flex;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -488,6 +493,7 @@ h3 {
   display: inline-flex;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-teal:hover {
@@ -510,6 +516,7 @@ h3 {
   display: inline-flex;
   justify-content: center;
   text-align: center;
+  cursor: pointer;
 }
 
 .btn-outline-dark:hover {
@@ -532,6 +539,7 @@ h3 {
   justify-content: center;
   text-align: center;
   transition: all 0.3s;
+  cursor: pointer;
 }
 
 .btn-outline:hover {

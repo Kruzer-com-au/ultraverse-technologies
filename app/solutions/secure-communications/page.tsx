@@ -24,6 +24,7 @@ export default function SecureCommunicationsPage() {
       />
 
       <ProductFeatureList
+        id="features"
         label={capabilities.label}
         title={capabilities.title}
         description={capabilities.description}

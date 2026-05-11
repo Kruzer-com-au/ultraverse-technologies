@@ -15,15 +15,17 @@ interface IndustryChallengesProps {
   label: string
   title: string
   challenges: ChallengeItem[]
+  id?: string
 }
 
 export default function IndustryChallenges({
   label,
   title,
-  challenges
+  challenges,
+  id
 }: IndustryChallengesProps) {
   return (
-    <section className="section-dark py-32 lg:py-48 px-6 lg:px-12">
+    <section id={id} className="section-dark py-32 lg:py-48 px-6 lg:px-12">
       <TealOrb size="w-[500px] h-[500px]" position="-top-40 -right-40" />
       <TealOrb size="w-[300px] h-[300px]" position="bottom-20 left-0" delay="3s" />
 

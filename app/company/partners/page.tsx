@@ -28,7 +28,11 @@ export default function PartnersPage() {
       />
 
       <ProductVisuals 
-        primary={{ label: '1400 × 600', sublabel: 'Partner Ecosystem' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Partner Ecosystem', 
+          src: '/images/PARTNER_ECOSYSTEM.png' 
+        }}
         bgClass="bg-background"
       />
 
@@ -57,7 +61,12 @@ export default function PartnersPage() {
       </section>
 
       <ProductVisuals 
-        primary={{ label: '800 × 500', sublabel: 'Integration Demo', aspectRatio: '800/500' }}
+        primary={{ 
+          label: '', 
+          sublabel: 'Integration Demo', 
+          aspectRatio: '800/500', 
+          src: '/images/INTEGRATION_DEMO.png' 
+        }}
         bgClass="bg-background"
       />
 

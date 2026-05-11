@@ -81,10 +81,12 @@ export default function UltraVersePage() {
         title="One Ecosystem. Four Experiences."
         description="The Ultraverse is ULTRAVERSE's gaming and spatial experience platform; a unified ecosystem where location-based gaming, digital companions, historical exploration, and spatial computing share one architecture, one economy, and one player identity. Built for players, creators, and enterprise partners."
         ctaText="Partnership Inquiries"
-        secondaryCtaText="Explore Products"
+        secondaryCtaText="Explore More"
+        secondaryCtaHref="#features"
       />
 
       <ProductFeatureList
+        id="features"
         label="Capabilities"
         title="Key Capabilities"
         description="A unified spatial architecture powering the next generation of location-based entertainment and gaming IP."

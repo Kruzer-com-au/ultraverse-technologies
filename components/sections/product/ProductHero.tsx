@@ -24,7 +24,7 @@ export default function ProductHero({
   description,
   ctaText = 'Request a Demo',
   ctaHref = '/contact',
-  secondaryCtaText = 'View All Products',
+  secondaryCtaText = 'Explore Products',
   secondaryCtaHref = '/products',
   companyName = 'Kruzer Ultraverse Pty Ltd',
   hideCtas = false,
@@ -59,8 +59,14 @@ export default function ProductHero({
               <Link href={ctaHref} className="btn-teal w-full sm:w-auto justify-center">{ctaText}</Link>
               <button
                 onClick={() => {
-                  if (
-                    secondaryCtaHref === '/products' || 
+                  if (secondaryCtaHref.startsWith('#')) {
+                    const targetId = secondaryCtaHref.substring(1)
+                    const element = document.getElementById(targetId)
+                    if (element) {
+                      element.scrollIntoView({ behavior: 'smooth' })
+                    }
+                  } else if (
+                    secondaryCtaHref === '/products' ||
                     secondaryCtaHref === '/solutions' ||
                     secondaryCtaHref === '/industries'
                   ) {

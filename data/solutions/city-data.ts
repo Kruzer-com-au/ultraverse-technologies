@@ -4,7 +4,7 @@ export const cityData = {
     title: "Plug & Play Data for Digital Twin Cities",
     description: "Real-time sensor feeds from active city networks. Ultra-lean packets built for model ingestion. No cleaning, no transformation, no delay.",
     cta: { text: "Talk to Our Data Team", href: "/contact" },
-    secondaryCta: { text: "Explore Solutions", href: "/solutions" }
+    secondaryCta: { text: "Explore More", href: "#features" }
   },
   opportunity: {
     label: "The Opportunity",

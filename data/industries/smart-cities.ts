@@ -7,8 +7,8 @@ export const smartCitiesData: IndustryPageData = {
     description: "The cities of tomorrow need data infrastructure built for today. Active sensor networks delivering real-time, model-ready data for urban intelligence at scale.",
     ctaText: "Talk to Our City Team",
     ctaHref: "/contact",
-    secondaryCtaText: "Explore Industries",
-    secondaryCtaHref: "/industries",
+    secondaryCtaText: "Explore More",
+    secondaryCtaHref: "#features",
   },
   problem: {
     label: "The Smart City Data Problem",

@@ -4,7 +4,7 @@ export const secureCommData = {
     title: "Enterprise Secure Communications",
     description: "End-to-end encrypted messaging and streaming built on Matrix Protocol. Designed for organizations where confidentiality is not optional.",
     cta: { text: "Request Security Briefing", href: "/contact" },
-    secondaryCta: { text: "Explore Solutions", href: "/solutions" }
+    secondaryCta: { text: "Explore More", href: "#features" }
   },
   capabilities: {
     label: "Capabilities",
