@@ -38,6 +38,7 @@ export default function SmartCitiesPage() {
       {/* Problem Section */}
       {problem && (
         <IndustryProblem 
+          id="features"
           label={problem.label}
           title={problem.title}
           description={problem.description}
@@ -63,6 +64,7 @@ export default function SmartCitiesPage() {
       {sections?.map((section) => (
         <ProductFeatureList 
           key={section.id}
+          id={section.id}
           label={section.label}
           title={section.title}
           description={section.description || ''}

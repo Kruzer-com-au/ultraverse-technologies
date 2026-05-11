@@ -8,18 +8,20 @@ interface IndustryProblemProps {
   title: string
   description: string
   theme?: 'light' | 'dark'
+  id?: string
 }
 
 export default function IndustryProblem({
   label,
   title,
   description,
-  theme = 'light'
+  theme = 'light',
+  id
 }: IndustryProblemProps) {
   const isDark = theme === 'dark'
   
   return (
-    <section className={`py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
+    <section id={id} className={`py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden ${isDark ? 'section-dark' : 'bg-background'}`}>
       <div className="max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           <div className="lg:col-span-8">

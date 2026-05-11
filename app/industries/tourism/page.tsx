@@ -38,6 +38,7 @@ export default function TourismPage() {
       {sections?.map((section, idx) => (
         <div key={section.id}>
           <ProductFeatureList 
+            id={section.id}
             label={section.label}
             title={section.title}
             description={section.description || ''}
@@ -65,13 +66,13 @@ export default function TourismPage() {
       ))}
 
       {/* Relevant Products */}
-      {products && (
+      {/* {products && (
         <ProductLinkList 
           label={products.label}
           title={products.title}
           items={products.items}
         />
-      )}
+      )} */}
 
       {/* Relevant Solutions */}
       {solutions && (

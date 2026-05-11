@@ -26,19 +26,29 @@ export default function IndustriesSection({ industries }: IndustriesSectionProps
         <div className="space-y-0">
           {industries.map((ind, i) => (
             <ScrollReveal key={ind.title} delay={i * 0.05}>
-              <Link
-                href={ind.href}
-                className="group flex flex-row items-center justify-between border-t border-black/10 py-6 lg:py-8 transition-all duration-700"
-              >
-                <div className="flex-1 pr-4">
-                  <h3 className="editorial-heading text-[clamp(1.1rem,4vw,4rem)] text-white group-hover:text-accent-teal transition-colors duration-700 uppercase leading-[1.1]">
-                    {ind.title}
-                  </h3>
+              {ind.href ? (
+                <Link
+                  href={ind.href}
+                  className="group flex flex-row items-center justify-between border-t border-black/10 py-6 lg:py-8 transition-all duration-700"
+                >
+                  <div className="flex-1 pr-4">
+                    <h3 className="editorial-heading text-[clamp(1.1rem,4vw,4rem)] text-white group-hover:text-accent-teal transition-colors duration-700 uppercase leading-[1.1]">
+                      {ind.title}
+                    </h3>
+                  </div>
+                  <div className="flex shrink-0">
+                    <ArrowRight />
+                  </div>
+                </Link>
+              ) : (
+                <div className="flex flex-row items-center justify-between border-t border-black/10 py-6 lg:py-8">
+                  <div className="flex-1 pr-4">
+                    <h3 className="editorial-heading text-[clamp(1.1rem,4vw,4rem)] text-white/40 uppercase leading-[1.1]">
+                      {ind.title}
+                    </h3>
+                  </div>
                 </div>
-                <div className="flex shrink-0">
-                  <ArrowRight />
-                </div>
-              </Link>
+              )}
             </ScrollReveal>
           ))}
           <div className="border-t border-black/10" />

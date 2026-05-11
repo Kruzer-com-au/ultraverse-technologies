@@ -81,11 +81,12 @@ export default function UltraDataPage() {
         description="Active sensor networks across launch cities. Ultra-lean packet sets. Plug & play feeds for twin city platforms. Ground-truth data that city-scale models can actually process."
         ctaText="Request Data Access"
         ctaHref="contact"
-        secondaryCtaText="Explore Products"
-        secondaryCtaHref="/products"
+        secondaryCtaText="Explore More"
+        secondaryCtaHref="#features"
       />
 
       <ProductProblemSection
+        id="features"
         label="The Problem"
         title="Digital twin city platforms are starving for processable, real-time data. Most city data is too noisy, too heavy, or arrives too late to be useful at scale."
         col1Text="Twin city modelling requires continuous data streams that are current, lightweight, and standardized. Satellite imagery is delayed. IoT dumps are too raw. Government datasets are quarterly at best."

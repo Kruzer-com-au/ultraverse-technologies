@@ -112,6 +112,9 @@ export default function TechnologyPage() {
         label="Technology"
         title="Our Technology"
         description="Purpose-built infrastructure designed for privacy, performance, and scale."
+        ctaText="Contact Engineering"
+        secondaryCtaText="Explore Technologies"
+        secondaryCtaHref="#features"
       />
 
       <ProductVisuals
@@ -123,6 +126,7 @@ export default function TechnologyPage() {
       />
 
       <ProductFeatureList
+        id="features"
         label="Core Infrastructure"
         title="Engineered for the Next Era"
         description="Every layer of the ULTRAVERSE stack is designed around privacy, interoperability, and performance at global scale."

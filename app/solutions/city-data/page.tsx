@@ -24,7 +24,7 @@ export default function CityDataPage() {
         secondaryCtaHref={hero.secondaryCta.href}
       />
 
-      <section className="py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
+      <section id="features" className="py-32 lg:py-48 px-6 lg:px-12 relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
             <div className="lg:col-span-8">

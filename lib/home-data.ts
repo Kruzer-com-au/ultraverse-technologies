@@ -123,12 +123,12 @@ export const industries: Industry[] = [
   },
   {
     title: 'Government',
-    href: '/industries',
+    href: '',
     desc: 'Secure digital infrastructure for public sector services, internal operations, and citizen-facing platforms.'
   },
   {
     title: 'CPG & Retail',
-    href: '/industries',
+    href: '',
     desc: 'Connected commerce experiences for consumer brands, retail activation, and audience engagement at scale.'
   },
   {

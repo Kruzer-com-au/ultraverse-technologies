@@ -7,12 +7,12 @@ export const financialData: IndustryPageData = {
     description: "Secure communications infrastructure built for financial services organizations where client confidentiality, regulatory compliance, and audit readiness are fundamental requirements.",
     ctaText: "Contact Sales",
     ctaHref: "/contact",
-    secondaryCtaText: "Explore Industries",
-    secondaryCtaHref: "/industries",
+    secondaryCtaText: "Explore More",
+    secondaryCtaHref: "#features",
   },
   sections: [
     {
-      id: "use-cases",
+      id: "features",
       label: "Use Cases",
       title: "How We Serve Financial Services",
       theme: "light",

@@ -69,11 +69,12 @@ export default function UltraStreamPage() {
         label="ULTRASTREAM"
         title="The Streaming Platform Built for Creators and Enterprises"
         description="Privacy-first streaming infrastructure that gives creators and organizations full control over their content, audience, and revenue. From white-label deployments to SDK integrations, ULTRASTREAM powers the next generation of live and on-demand streaming."
-        secondaryCtaText="Explore Products"
-        secondaryCtaHref="/products"
+        secondaryCtaText="Explore More"
+        secondaryCtaHref="#features"
       />
 
       <ProductFeatureList
+        id="features"
         label="Capabilities"
         title="Key Capabilities"
         description="ULTRASTREAM provides the full stack of streaming technology, from infrastructure to engagement, all underpinned by privacy-first design."

@@ -63,7 +63,7 @@ export default function TermsClient() {
             Back to Home
           </Link>
           
-          <h1 className="text-[clamp(32px,5vw,48px)] font-bold mb-4 tracking-[-0.02em] leading-tight">Terms of Service</h1>
+          <h1 className="!text-[28px] md:!text-[36px] font-bold mb-4 tracking-[-0.02em] leading-tight">Terms of Service</h1>
           <p className="text-[#666] text-[13px] mb-12">Last updated: April 2026</p>
           
           <div className="space-y-12">
@@ -75,7 +75,7 @@ export default function TermsClient() {
 
             {termsSections.map((section, idx) => (
               <section key={idx}>
-                <h3 className="text-[20px] font-light mb-4 text-[#fff]">{section.title}</h3>
+                <h3 className="!text-[18px] md:!text-[22px] font-bold mb-4 text-[#fff] tracking-normal">{section.title}</h3>
                 <div className="space-y-4">
                   {Array.isArray(section.content) ? (
                     section.content.map((p, pIdx) => (

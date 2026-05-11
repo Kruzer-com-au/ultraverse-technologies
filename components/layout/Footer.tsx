@@ -27,9 +27,6 @@ const footerNavigation = {
   ],
   company: [
     { name: 'About', href: '/company' },
-    { name: 'Leadership', href: '/company/leadership' },
-    { name: 'Careers', href: '/company/careers' },
-    { name: 'Press & Media', href: '/company/press' },
     { name: 'Partners', href: '/company/partners' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -57,7 +54,7 @@ export default function Footer() {
             </p>
             <p className="text-xs text-text-muted mb-4">Kruzer Ultraverse Pty Ltd</p>
             <a 
-              href="#" 
+              href="https://www.linkedin.com/company/kruzer-technology/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-text-muted hover:text-teal-deep transition-all group inline-block"
@@ -103,9 +100,6 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link href={item.href} className="text-sm text-text-secondary hover:text-teal-deep transition-colors">
                     {item.name}
-
-
-
                   </Link>
                 </li>
               ))}
@@ -149,7 +143,6 @@ export default function Footer() {
           <p className="text-xs">© {new Date().getFullYear()} Kruzer Ultraverse Pty Ltd. All rights reserved.</p>
           <div className="flex gap-6 text-xs">
             <Link href="/privacy" className="hover:text-teal-deep transition-colors">Privacy Policy</Link>
-            <Link href="/terms" className="hover:text-teal-deep transition-colors">Terms of Service</Link>
           </div>
         </div>
 

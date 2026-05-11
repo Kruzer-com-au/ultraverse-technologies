@@ -88,7 +88,7 @@ export default function HeroSection({
         </div>
 
         {/* Bottom info bar */}
-        <div className="hero-animate-bar relative max-w-[1400px] mx-auto w-full pt-6 pb-4">
+        <div className="hero-animate-bar relative max-w-[1400px] mx-auto w-full pt-6 pb-4 lg:px-12 px-6">
           <div className="border-t-2 border-black/15 pt-6">
             <div className="flex items-center justify-between">
               <span className="editorial-uppercase text-[var(--text-secondary)] text-xs font-semibold tracking-[0.15em]">{company}</span>
