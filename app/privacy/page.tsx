@@ -136,7 +136,8 @@ export default function PrivacyPage() {
         
         .toc ol { 
           margin: 0; 
-          padding-left: 1.25rem; 
+          padding: 0;
+          list-style: none;
           display: grid;
           grid-template-cols: 1fr;
         }
@@ -166,24 +167,24 @@ export default function PrivacyPage() {
         <nav className="toc" aria-label="Table of contents">
           <h2>Contents</h2>
           <ol>
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#who-we-are">Who we are</a></li>
-            <li><a href="#scope">Scope</a></li>
-            <li><a href="#information-we-collect">Personal information we collect</a></li>
-            <li><a href="#how-we-collect">How we collect personal information</a></li>
-            <li><a href="#purposes">Why we use your personal information</a></li>
-            <li><a href="#cookies">Cookies and similar tracking technologies</a></li>
-            <li><a href="#disclosure">Disclosure of personal information</a></li>
-            <li><a href="#transfers">International data transfers</a></li>
-            <li><a href="#marketing">Marketing communications and newsletters</a></li>
-            <li><a href="#security">Data security</a></li>
-            <li><a href="#retention">Data retention</a></li>
-            <li><a href="#rights">Your privacy rights</a></li>
-            <li><a href="#children">Children&rsquo;s privacy</a></li>
-            <li><a href="#automated">Automated decision-making</a></li>
-            <li><a href="#third-party-links">Third-party links</a></li>
-            <li><a href="#changes">Changes to this Privacy Policy</a></li>
-            <li><a href="#contact">Contact us</a></li>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#who-we-are">2. Who we are</a></li>
+            <li><a href="#scope">3. Scope</a></li>
+            <li><a href="#information-we-collect">4. Personal information we collect</a></li>
+            <li><a href="#how-we-collect">5. How we collect personal information</a></li>
+            <li><a href="#purposes">6. Why we use your personal information</a></li>
+            <li><a href="#cookies">7. Cookies and similar tracking technologies</a></li>
+            <li><a href="#disclosure">8. Disclosure of personal information</a></li>
+            <li><a href="#transfers">9. International data transfers</a></li>
+            <li><a href="#marketing">10. Marketing communications and newsletters</a></li>
+            <li><a href="#security">11. Data security</a></li>
+            <li><a href="#retention">12. Data retention</a></li>
+            <li><a href="#rights">13. Your privacy rights</a></li>
+            <li><a href="#children">14. Children&rsquo;s privacy</a></li>
+            <li><a href="#automated">15. Automated decision-making</a></li>
+            <li><a href="#third-party-links">16. Third-party links</a></li>
+            <li><a href="#changes">17. Changes to this Privacy Policy</a></li>
+            <li><a href="#contact">18. Contact us</a></li>
           </ol>
         </nav>
 
