@@ -216,13 +216,14 @@ export default function Header() {
             {orderedNavItems.map((item) => {
               const hasDropdown = dropdownLabels.includes(item.label)
               const isExpanded = mobileExpanded === item.label
+              const isActive = pathname === item.href || pathname.startsWith(item.href + '/')
 
               return (
                 <div key={item.href} className="border-b border-black/8">
                   <div className="flex items-center justify-between">
                     <Link
                       href={item.href}
-                      className="flex-1 py-5 text-[16px] font-bold uppercase tracking-[0.1em] text-black"
+                      className={`flex-1 py-5 text-[16px] font-bold uppercase tracking-[0.1em] transition-colors duration-200 ${isActive ? 'text-black' : 'text-black/55 hover:text-[var(--accent-teal-deep)]'}`}
                     >
                       {item.label}
                     </Link>
