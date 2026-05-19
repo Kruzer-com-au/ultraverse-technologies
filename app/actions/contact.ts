@@ -92,7 +92,7 @@ export async function sendEmail(prevState: any, formData: FormData): Promise<Con
       command: error.command,
       response: error.response
     })
-    
+
     return {
       error: `Connection error: ${error.message || 'Check your SMTP credentials and try again.'}`,
     }
