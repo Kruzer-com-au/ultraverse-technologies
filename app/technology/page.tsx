@@ -14,8 +14,9 @@ const coreInfrastructure = [
     num: '01',
     sublabel: 'Data Infrastructure',
     title: 'Real-Time Sensor Networks',
-    desc: 'Active ground-truth sensor networks deployed across launch cities, producing ultra-lean packet sets engineered specifically for digital twin city model ingestion. capture what is happening on the ground right now — from pedestrian flow to environmental conditions — and package it into standardized feeds.',
+    desc: 'Active ground-truth sensor networks deployed across launch cities, producing ultra-lean packet sets engineered specifically for digital twin city model ingestion.',
     bullets: [
+      'Capture what is happening on the ground right now — from pedestrian flow to environmental conditions — and package it into standardized feeds.',
       'Active sensor deployments across launch cities with real-time telemetry',
       'Ultra-lean packet architecture — compressed for city-scale model ingestion',
       'Plug & play integration with major digital twin platforms and urban modelling tools',
