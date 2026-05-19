@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useActionState, useEffect, useRef } from 'react'
+import React, { useActionState, useEffect, useRef, useState } from 'react'
+import ReCAPTCHA from 'react-google-recaptcha'
 import ScrollReveal from '@/components/ScrollReveal'
 import TechnicalPlaceholder from '@/components/ui/TechnicalPlaceholder'
 import { sendEmail, ContactState } from '@/app/actions/contact'
@@ -10,13 +11,20 @@ const initialState: ContactState = {}
 export default function ContactPage() {
   const [state, formAction, isPending] = useActionState(sendEmail, initialState)
   const formRef = useRef<HTMLFormElement>(null)
+  const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
 
-  // Reset form on success
+  // Reset form and/or captcha based on response state
   useEffect(() => {
-    if (state.success && formRef.current) {
-      formRef.current.reset()
+    if (state.success) {
+      formRef.current?.reset()
+      recaptchaRef.current?.reset()
+      setCaptchaToken(null)
+    } else if (state.resetCaptcha) {
+      recaptchaRef.current?.reset()
+      setCaptchaToken(null)
     }
-  }, [state.success])
+  }, [state])
 
   return (
     <main className="flex-1 bg-background">
@@ -57,6 +65,7 @@ export default function ContactPage() {
                         id="name"
                         name="name"
                         required
+                        defaultValue={state.inputs?.name}
                         className="w-full px-0 py-3 bg-transparent border-0 border-b border-black/10 text-text-primary text-sm focus:outline-none focus:border-accent-teal transition-colors duration-700 placeholder:text-text-secondary/40"
                         placeholder="Your name"
                       />
@@ -68,6 +77,7 @@ export default function ContactPage() {
                         id="email"
                         name="email"
                         required
+                        defaultValue={state.inputs?.email}
                         className="w-full px-0 py-3 bg-transparent border-0 border-b border-black/10 text-text-primary text-sm focus:outline-none focus:border-accent-teal transition-colors duration-700 placeholder:text-text-secondary/40"
                         placeholder="you@company.com"
                       />
@@ -81,6 +91,7 @@ export default function ContactPage() {
                         type="text"
                         id="company"
                         name="company"
+                        defaultValue={state.inputs?.company}
                         className="w-full px-0 py-3 bg-transparent border-0 border-b border-black/10 text-text-primary text-sm focus:outline-none focus:border-accent-teal transition-colors duration-700 placeholder:text-text-secondary/40"
                         placeholder="Your company"
                       />
@@ -91,6 +102,7 @@ export default function ContactPage() {
                         type="text"
                         id="role"
                         name="role"
+                        defaultValue={state.inputs?.role}
                         className="w-full px-0 py-3 bg-transparent border-0 border-b border-black/10 text-text-primary text-sm focus:outline-none focus:border-accent-teal transition-colors duration-700 placeholder:text-text-secondary/40"
                         placeholder="Your role"
                       />
@@ -100,10 +112,11 @@ export default function ContactPage() {
                   <div>
                     <label htmlFor="interest" className="block editorial-uppercase text-text-primary text-[10px] tracking-[0.15em] font-bold mb-3">Interest Area</label>
                     <select
+                      key={state.inputs?.interest || 'interest-select'}
                       id="interest"
                       name="interest"
                       required
-                      defaultValue=""
+                      defaultValue={state.inputs?.interest || ""}
                       className="w-full px-0 py-3 bg-transparent border-0 border-b border-black/10 text-text-primary text-sm focus:outline-none focus:border-accent-teal transition-colors duration-700 appearance-none cursor-pointer"
                     >
                       <option value="" disabled>Select an area of interest</option>
@@ -123,8 +136,19 @@ export default function ContactPage() {
                       name="message"
                       required
                       rows={5}
+                      defaultValue={state.inputs?.message}
                       className="w-full px-0 py-3 bg-transparent border-0 border-b border-black/10 text-text-primary text-sm focus:outline-none focus:border-accent-teal transition-colors duration-700 resize-none placeholder:text-text-secondary/40"
                       placeholder="Tell us about your project or inquiry..."
+                    />
+                  </div>
+
+                  <input type="hidden" name="captchaToken" value={captchaToken || ''} />
+                  <div className="mt-6 mb-8">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
+                      onChange={(token) => setCaptchaToken(token)}
+                      onExpired={() => setCaptchaToken(null)}
                     />
                   </div>
 
@@ -135,7 +159,7 @@ export default function ContactPage() {
                   >
                     {isPending ? (
                       <>
-                        Sending... 
+                        Sending...
                         <span className="w-3 h-3 border-2 border-current border-t-transparent rounded-full animate-spin" />
                       </>
                     ) : (
@@ -146,9 +170,7 @@ export default function ContactPage() {
                   </button>
                 </form>
               </ScrollReveal>
-            </div>
-
-            {/* Info Section */}
+            </div>{/* Info Section */}
             <div className="lg:col-span-4 lg:col-start-9">
               <ScrollReveal delay={0.1}>
                 <p className="editorial-uppercase text-accent-teal text-xs font-bold tracking-[0.2em] mb-8">Contact Information</p>

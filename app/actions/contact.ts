@@ -16,16 +16,27 @@ export type ContactState = {
   success?: boolean
   error?: string
   loading?: boolean
+  resetCaptcha?: boolean
+  inputs?: {
+    name: string
+    email: string
+    company: string
+    role: string
+    interest: string
+    message: string
+  }
 }
 
 export async function sendEmail(prevState: any, formData: FormData): Promise<ContactState> {
+  const token = formData.get('captchaToken') as string
+
   const rawData = {
-    name: formData.get('name'),
-    email: formData.get('email'),
-    company: formData.get('company'),
-    role: formData.get('role'),
-    interest: formData.get('interest'),
-    message: formData.get('message'),
+    name: (formData.get('name') as string) || '',
+    email: (formData.get('email') as string) || '',
+    company: (formData.get('company') as string) || '',
+    role: (formData.get('role') as string) || '',
+    interest: (formData.get('interest') as string) || '',
+    message: (formData.get('message') as string) || '',
   }
 
   // 1. Validation
@@ -34,10 +45,43 @@ export async function sendEmail(prevState: any, formData: FormData): Promise<Con
   if (!validatedFields.success) {
     return {
       error: validatedFields.error.issues[0]?.message || 'Invalid form data. Please check all fields.',
+      inputs: rawData,
     }
   }
 
   const { name, email, company, role, interest, message } = validatedFields.data
+
+  if (!token) {
+    return {
+      error: 'Please complete the reCAPTCHA challenge.',
+      inputs: rawData,
+    }
+  }
+
+  try {
+    const recaptchaRes = await fetch(`https://www.google.com/recaptcha/api/siteverify`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${token}`,
+    })
+
+    const recaptchaData = await recaptchaRes.json()
+    if (!recaptchaData.success) {
+      return {
+        error: 'reCAPTCHA verification failed. Please try again.',
+        inputs: rawData,
+        resetCaptcha: true,
+      }
+    }
+  } catch (error) {
+    return {
+      error: 'Error verifying reCAPTCHA. Please try again.',
+      inputs: rawData,
+      resetCaptcha: true,
+    }
+  }
 
   // 2. SMTP Transport Setup
   const transporter = nodemailer.createTransport({
@@ -63,7 +107,7 @@ export async function sendEmail(prevState: any, formData: FormData): Promise<Con
         Company: ${company || 'N/A'}
         Role: ${role || 'N/A'}
         Interest Area: ${interest}
-        
+
         Message:
         ${message}
       `,
@@ -95,6 +139,8 @@ export async function sendEmail(prevState: any, formData: FormData): Promise<Con
 
     return {
       error: `Connection error: ${error.message || 'Check your SMTP credentials and try again.'}`,
+      inputs: rawData,
+      resetCaptcha: true,
     }
   }
 }
