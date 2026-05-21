@@ -45,7 +45,7 @@ export const leadershipTeam = [
     num: '07',
     title: 'Leon Gardiner',
     sublabel: 'Non-Executive Director',
-    photo: '/images/img_avatar.png',
+    photo: '/images/LEON_GARDINER.png',
     desc: "With over 30 years of leadership across property, infrastructure, and construction, he is a trusted advisor to boards, government bodies, and private organisations on corporate governance, enterprise risk, audit, and compliance. His career includes serving as an independent government reviewer on projects exceeding AUD $2 billion, leading property compliance audits exceeding AUD $3 billion, and overseeing commercial portfolios valued at over AUD $1.5 billion. He is also the Founder Director of the Men's Mental Health Foundation, combining deep commercial expertise with a genuine commitment to social impact. At Kruzer, he brings the independent judgment and governance rigour that a company at this stage of growth requires."
   },
   {
